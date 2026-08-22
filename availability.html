@@ -41,16 +41,14 @@
 
       background:
         linear-gradient(
-          rgba(5, 8, 13, 0.90),
+          rgba(5, 8, 13, 0.91),
           rgba(5, 8, 13, 0.96)
         ),
         url("logo.png");
 
-      background-size: 430px;
+      background-size: 420px;
       background-position: center 42%;
       background-repeat: no-repeat;
-
-      opacity: 0.55;
       pointer-events: none;
     }
 
@@ -119,7 +117,6 @@
       width: 100%;
       background: rgba(5, 9, 15, 0.94);
       border-bottom: 1px solid rgba(93, 169, 228, 0.28);
-
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
@@ -135,7 +132,7 @@
       gap: 24px;
     }
 
-    /* TOP LEFT LOGO / BRAND */
+    /* TOP LEFT LOGO */
     .brand {
       display: flex;
       align-items: center;
@@ -145,9 +142,7 @@
     .brand-logo {
       width: 88px;
       height: 88px;
-
       object-fit: contain;
-
       border-radius: 18px;
 
       box-shadow:
@@ -174,11 +169,6 @@
       font-size: 17px;
       font-weight: 700;
       white-space: nowrap;
-      transition: 0.2s ease;
-    }
-
-    .back-link:hover {
-      color: #ffffff;
     }
 
     /* MAIN */
@@ -253,11 +243,6 @@
       line-height: 1.4;
 
       outline: none;
-
-      transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
     }
 
     input {
@@ -279,10 +264,7 @@
     select:focus,
     textarea:focus {
       border-color: #66baf4;
-
-      box-shadow:
-        0 0 0 3px rgba(70, 161, 224, 0.12);
-
+      box-shadow: 0 0 0 3px rgba(70, 161, 224, 0.12);
       background: #0c1723;
     }
 
@@ -291,18 +273,7 @@
       color: #707b88;
     }
 
-    /* AUTOFILL */
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus {
-      -webkit-text-fill-color: #111111;
-      -webkit-box-shadow: 0 0 0 1000px #fbffb8 inset;
-      box-shadow: 0 0 0 1000px #fbffb8 inset;
-      border-color: #cfd298;
-      transition: background-color 9999s ease-out 0s;
-    }
-
-    /* IPHONE DATE ALIGNMENT FIX */
+    /* DATE ALIGNMENT FIX */
     input[type="date"] {
       width: 100%;
       min-width: 0;
@@ -319,7 +290,6 @@
 
       font-family: Arial, Helvetica, sans-serif;
       font-size: 18px;
-      line-height: normal;
 
       text-align: left;
 
@@ -342,15 +312,9 @@
       margin: 0;
     }
 
-    input[type="date"]::-webkit-datetime-edit-fields-wrapper {
-      padding: 0;
-      margin: 0;
-    }
-
     input[type="date"]::-webkit-calendar-picker-indicator {
       margin-left: auto;
       opacity: 0.85;
-      cursor: pointer;
     }
 
     /* BUTTON */
@@ -362,37 +326,16 @@
       padding: 18px 22px;
       margin-top: 10px;
 
-      background:
-        linear-gradient(
-          135deg,
-          #328fd1,
-          #65bdf7
-        );
+      background: linear-gradient(
+        135deg,
+        #328fd1,
+        #65bdf7
+      );
 
       color: #04101a;
-
       font-size: 19px;
       font-weight: 800;
-
       cursor: pointer;
-
-      box-shadow:
-        0 10px 28px rgba(55, 153, 220, 0.25);
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .submit-btn:hover {
-      transform: translateY(-2px);
-
-      box-shadow:
-        0 14px 34px rgba(55, 153, 220, 0.34);
-    }
-
-    .submit-btn:active {
-      transform: translateY(0);
     }
 
     /* CONTACT */
@@ -411,7 +354,7 @@
     /* MOBILE */
     @media (max-width: 700px) {
       body::before {
-        background-size: 310px;
+        background-size: 300px;
         background-position: center 38%;
       }
 
@@ -449,17 +392,9 @@
         margin-top: 26px;
       }
 
-      .intro {
-        margin-bottom: 23px;
-      }
-
       .form-card {
         padding: 27px 22px;
         border-radius: 20px;
-      }
-
-      label {
-        font-size: 16px;
       }
 
       input,
@@ -468,19 +403,11 @@
       input[type="date"] {
         font-size: 17px;
       }
-
-      .quote-bg span {
-        font-size: 20px;
-      }
     }
 
     @media (max-width: 500px) {
       body::before {
-        background-size: 270px;
-      }
-
-      .header-inner {
-        min-height: 106px;
+        background-size: 260px;
       }
 
       .brand-logo {
@@ -494,7 +421,6 @@
 
       .brand-text p {
         font-size: 9px;
-        letter-spacing: 1.5px;
       }
 
       .back-link {
@@ -504,25 +430,18 @@
       .form-card {
         padding: 22px 18px;
       }
-
-      .form-group {
-        margin-bottom: 23px;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- VERY SUBTLE BACKGROUND QUOTES -->
   <div class="quote-bg">
     <span>Precision Shine. Every Time.</span>
     <span>Where Clean Meets Perfection.</span>
     <span>Bringing Your Vehicle Back to Life.</span>
   </div>
 
-
-  <!-- HEADER -->
   <header>
     <div class="header-inner">
 
@@ -541,7 +460,6 @@
 
       </a>
 
-
       <a href="index.html" class="back-link">
         ← Back to Home
       </a>
@@ -549,53 +467,23 @@
     </div>
   </header>
 
-
-  <!-- MAIN -->
   <main>
 
     <section class="intro">
-
-      <h2>
-        Check Availability
-      </h2>
+      <h2>Check Availability</h2>
 
       <p>
         Tell us about your vehicle and what time works best.
         We’ll contact you to confirm your appointment.
       </p>
-
     </section>
-
 
     <section class="form-card">
 
-      <form
-        action="https://formsubmit.co/YOUR-EMAIL-HERE"
-        method="POST"
-      >
-
-        <!-- FORMSUBMIT SETTINGS -->
-
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Twin Turbo Detailers Booking Request"
-        >
-
-        <input
-          type="hidden"
-          name="_captcha"
-          value="false"
-        >
-
-
-        <!-- NAME -->
+      <form>
 
         <div class="form-group">
-
-          <label for="name">
-            Name
-          </label>
+          <label for="name">Name</label>
 
           <input
             type="text"
@@ -604,17 +492,10 @@
             placeholder="Your name"
             required
           >
-
         </div>
 
-
-        <!-- PHONE -->
-
         <div class="form-group">
-
-          <label for="phone">
-            Phone Number
-          </label>
+          <label for="phone">Phone Number</label>
 
           <input
             type="tel"
@@ -623,17 +504,10 @@
             placeholder="208-000-0000"
             required
           >
-
         </div>
 
-
-        <!-- VEHICLE -->
-
         <div class="form-group">
-
-          <label for="vehicle">
-            Vehicle
-          </label>
+          <label for="vehicle">Vehicle</label>
 
           <input
             type="text"
@@ -642,24 +516,16 @@
             placeholder="Example: 2018 Dodge Charger"
             required
           >
-
         </div>
 
-
-        <!-- SERVICE -->
-
         <div class="form-group">
-
-          <label for="service">
-            Service
-          </label>
+          <label for="service">Service</label>
 
           <select
             id="service"
             name="Service"
             required
           >
-
             <option value="">
               Select a service
             </option>
@@ -679,19 +545,11 @@
             <option value="Other">
               Other
             </option>
-
           </select>
-
         </div>
 
-
-        <!-- DATE -->
-
         <div class="form-group">
-
-          <label for="date">
-            Preferred Date
-          </label>
+          <label for="date">Preferred Date</label>
 
           <input
             type="date"
@@ -699,24 +557,16 @@
             name="Preferred Date"
             required
           >
-
         </div>
 
-
-        <!-- TIME -->
-
         <div class="form-group">
-
-          <label for="time">
-            Preferred Time
-          </label>
+          <label for="time">Preferred Time</label>
 
           <select
             id="time"
             name="Preferred Time"
             required
           >
-
             <option value="">
               Select a time
             </option>
@@ -736,19 +586,11 @@
             <option value="Flexible">
               Flexible
             </option>
-
           </select>
-
         </div>
 
-
-        <!-- LOCATION -->
-
         <div class="form-group">
-
-          <label for="location">
-            Service Location
-          </label>
+          <label for="location">Service Location</label>
 
           <input
             type="text"
@@ -757,28 +599,17 @@
             placeholder="City or address"
             required
           >
-
         </div>
 
-
-        <!-- VEHICLE CONDITION -->
-
         <div class="form-group">
-
-          <label for="condition">
-            Vehicle Condition
-          </label>
+          <label for="condition">Vehicle Condition</label>
 
           <textarea
             id="condition"
             name="Vehicle Condition"
             placeholder="Tell us anything we should know about the vehicle..."
           ></textarea>
-
         </div>
-
-
-        <!-- SUBMIT -->
 
         <button
           type="submit"
@@ -791,19 +622,14 @@
 
     </section>
 
-
     <div class="contact-note">
-
       Prefer to call or text?
-
       <a href="tel:9862089586">
         986-208-9586
       </a>
-
     </div>
 
   </main>
-
 
   <script>
     const dateInput = document.getElementById("date");
