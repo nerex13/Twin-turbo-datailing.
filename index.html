@@ -56,7 +56,7 @@
     }
 
     .nav {
-      min-height: 76px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -69,19 +69,13 @@
       gap: 12px;
     }
 
-    .brand-mark {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 18px;
-      color: white;
-      background:
-        linear-gradient(135deg, #168cff, #65bdff 55%, #c9d0d8);
-      border: 2px solid #d7dde5;
-      box-shadow: 0 0 22px rgba(22, 140, 255, 0.32);
+    .brand-logo {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(215, 221, 229, 0.35);
+      box-shadow: 0 0 22px rgba(22, 140, 255, 0.28);
     }
 
     .brand-text strong {
@@ -199,8 +193,6 @@
       border: 1px solid #718090;
       background: rgba(255, 255, 255, 0.04);
     }
-
-    /* GENERAL */
 
     section {
       padding: 90px 0;
@@ -386,7 +378,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* MOBILE SERVICE */
+    /* MOBILE */
 
     .mobile {
       background:
@@ -444,8 +436,6 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 850px) {
       nav {
         display: none;
@@ -493,6 +483,19 @@
         padding: 70px 0;
       }
 
+      .brand-logo {
+        width: 54px;
+        height: 54px;
+      }
+
+      .brand-text strong {
+        font-size: 15px;
+      }
+
+      .brand-text span {
+        font-size: 10px;
+      }
+
       .before-after {
         grid-template-columns: 1fr;
       }
@@ -535,7 +538,12 @@
   <div class="container nav">
 
     <a href="#top" class="brand">
-      <div class="brand-mark">TT</div>
+
+      <img
+        src="IMG_0982.png"
+        alt="Twin Turbo Detailers logo"
+        class="brand-logo"
+      >
 
       <div class="brand-text">
         <strong>Twin Turbo Detailers</strong>
@@ -554,8 +562,6 @@
 </header>
 
 <main id="top">
-
-  <!-- HERO -->
 
   <section class="hero">
     <div class="container">
@@ -590,8 +596,6 @@
       </div>
     </div>
   </section>
-
-  <!-- SERVICES -->
 
   <section class="services" id="services">
     <div class="container">
@@ -637,8 +641,6 @@
     </div>
   </section>
 
-  <!-- PRICE -->
-
   <section class="offer">
     <div class="container">
 
@@ -675,8 +677,6 @@
     </div>
   </section>
 
-  <!-- BEFORE AND AFTER -->
-
   <section class="results" id="results">
     <div class="container">
 
@@ -692,25 +692,21 @@
         <div class="before-after">
 
           <div class="photo-card">
-            <div class="photo-label before-label">
-              Before
-            </div>
+            <div class="photo-label before-label">Before</div>
 
             <img
               src="IMG_0947.jpeg"
-              alt="Front driver area before detailing"
+              alt="Interior before detailing"
               loading="lazy"
             >
           </div>
 
           <div class="photo-card">
-            <div class="photo-label after-label">
-              After
-            </div>
+            <div class="photo-label after-label">After</div>
 
             <img
               src="IMG_0952.jpeg"
-              alt="Front driver area after detailing"
+              alt="Interior after detailing"
               loading="lazy"
             >
           </div>
@@ -722,25 +718,21 @@
         <div class="before-after">
 
           <div class="photo-card">
-            <div class="photo-label before-label">
-              Before
-            </div>
+            <div class="photo-label before-label">Before</div>
 
             <img
               src="IMG_0948.jpeg"
-              alt="Rear seats before detailing"
+              alt="Interior before detailing"
               loading="lazy"
             >
           </div>
 
           <div class="photo-card">
-            <div class="photo-label after-label">
-              After
-            </div>
+            <div class="photo-label after-label">After</div>
 
             <img
               src="IMG_0955.jpeg"
-              alt="Rear seats after detailing"
+              alt="Interior after detailing"
               loading="lazy"
             >
           </div>
@@ -752,25 +744,21 @@
         <div class="before-after">
 
           <div class="photo-card">
-            <div class="photo-label before-label">
-              Before
-            </div>
+            <div class="photo-label before-label">Before</div>
 
             <img
               src="IMG_0949.jpeg"
-              alt="Passenger side before detailing"
+              alt="Interior before detailing"
               loading="lazy"
             >
           </div>
 
           <div class="photo-card">
-            <div class="photo-label after-label">
-              After
-            </div>
+            <div class="photo-label after-label">After</div>
 
             <img
               src="IMG_0957.jpeg"
-              alt="Passenger side after detailing"
+              alt="Interior after detailing"
               loading="lazy"
             >
           </div>
@@ -780,8 +768,6 @@
 
     </div>
   </section>
-
-  <!-- FINISHED GALLERY -->
 
   <section id="gallery">
     <div class="container">
@@ -819,8 +805,6 @@
     </div>
   </section>
 
-  <!-- MOBILE SERVICE -->
-
   <section class="mobile">
     <div class="container">
 
@@ -847,8 +831,6 @@
       </div>
     </div>
   </section>
-
-  <!-- CONTACT -->
 
   <section class="contact" id="contact">
     <div class="container">
