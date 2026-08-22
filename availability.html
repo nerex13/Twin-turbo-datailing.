@@ -1,1 +1,678 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Check Availability | Twin Turbo Detailers</title>
+
+  <meta
+    name="description"
+    content="Check availability for Twin Turbo Detailers mobile auto detailing."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #05080d;
+      color: #ffffff;
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(
+          rgba(5, 8, 13, 0.90),
+          rgba(5, 8, 13, 0.95)
+        ),
+        url("IMG_0982.png") center / cover no-repeat;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(22, 140, 255, 0.18),
+          transparent 42%
+        );
+      pointer-events: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(950px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 8, 13, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(92, 180, 255, 0.18);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(215, 221, 229, 0.35);
+      box-shadow: 0 0 20px rgba(22, 140, 255, 0.22);
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 17px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: #9ba8b8;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .back-link {
+      color: #79c2ff;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 80px 0 48px;
+      text-align: center;
+    }
+
+    .hero-logo {
+      width: 210px;
+      margin: 0 auto 28px;
+      border-radius: 18px;
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.38);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 7px 13px;
+      border: 1px solid rgba(92, 180, 255, 0.5);
+      border-radius: 999px;
+      color: #73bdff;
+      background: rgba(20, 105, 185, 0.12);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 66px);
+      line-height: 1;
+      margin-bottom: 18px;
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      color: #55adff;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #bec8d3;
+      font-size: 17px;
+    }
+
+    /* QUOTES */
+
+    .quotes {
+      padding: 10px 0 45px;
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .quote {
+      padding: 20px;
+      text-align: center;
+      border-radius: 14px;
+      background: rgba(10, 16, 24, 0.80);
+      border: 1px solid rgba(120, 190, 255, 0.14);
+      color: #dbe4ed;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+    }
+
+    /* FORM */
+
+    .form-section {
+      padding: 0 0 90px;
+    }
+
+    .form-card {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 38px;
+      border-radius: 22px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(19, 29, 42, 0.94),
+          rgba(8, 13, 20, 0.96)
+        );
+      border: 1px solid rgba(92, 180, 255, 0.25);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+      backdrop-filter: blur(12px);
+    }
+
+    .form-card h2 {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .form-intro {
+      text-align: center;
+      color: #aeb9c5;
+      margin-bottom: 30px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 800;
+      color: #d9e1e9;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(150, 175, 205, 0.24);
+      border-radius: 10px;
+      padding: 14px 15px;
+      font: inherit;
+      color: #ffffff;
+      background: #0b121b;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #55adff;
+      box-shadow: 0 0 0 3px rgba(85, 173, 255, 0.10);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    select option {
+      background: #0b121b;
+      color: white;
+    }
+
+    .notice {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: rgba(22, 140, 255, 0.09);
+      border: 1px solid rgba(92, 180, 255, 0.18);
+      color: #b9c8d7;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .button-row {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      min-height: 52px;
+      border-radius: 9px;
+      padding: 0 22px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 900;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      flex: 1;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #168cff, #60b7ff);
+      color: white;
+      box-shadow: 0 10px 30px rgba(22, 140, 255, 0.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(150, 175, 205, 0.3);
+      background: rgba(255, 255, 255, 0.04);
+      color: #dce3ea;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      padding-bottom: 75px;
+    }
+
+    .contact h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      color: #adb8c4;
+      margin-bottom: 18px;
+    }
+
+    .phone {
+      display: inline-block;
+      color: #5db6ff;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 900;
+    }
+
+    footer {
+      padding: 28px 0;
+      text-align: center;
+      color: #748190;
+      font-size: 13px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(5, 8, 13, 0.75);
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        min-height: 74px;
+      }
+
+      .brand-logo {
+        width: 52px;
+        height: 52px;
+      }
+
+      .brand-text strong {
+        font-size: 14px;
+      }
+
+      .brand-text span {
+        font-size: 9px;
+      }
+
+      .back-link {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .hero-logo {
+        width: 175px;
+      }
+
+      .quote-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-card {
+        padding: 28px 20px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="index.html" class="brand">
+
+      <img
+        src="IMG_0982.png"
+        alt="Twin Turbo Detailers logo"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+        <strong>Twin Turbo Detailers</strong>
+        <span>Mobile Auto Detailing</span>
+      </div>
+
+    </a>
+
+    <a href="index.html" class="back-link">
+      ← Back to Home
+    </a>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+
+      <img
+        src="IMG_0982.png"
+        alt="Twin Turbo Detailers"
+        class="hero-logo"
+      >
+
+      <div class="eyebrow">
+        Professional Auto Detailing
+      </div>
+
+      <h1>
+        Check <span>Availability</span>
+      </h1>
+
+      <p>
+        Tell us a little about your vehicle and when you'd like your detail.
+        We'll confirm availability with you directly.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="quotes">
+    <div class="container">
+
+      <div class="quote-grid">
+
+        <div class="quote">
+          “Precision Shine. Every Time.”
+        </div>
+
+        <div class="quote">
+          “Where Clean Meets Perfection.”
+        </div>
+
+        <div class="quote">
+          “Bringing Your Vehicle Back to Life.”
+        </div>
+
+        <div class="quote">
+          “Professional Auto Detailing.”
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="form-section">
+    <div class="container">
+
+      <div class="form-card">
+
+        <h2>
+          Request an Appointment
+        </h2>
+
+        <p class="form-intro">
+          Complete the form below and we'll get back to you to confirm your slot.
+        </p>
+
+        <form
+          action="mailto:9862089586"
+          method="post"
+          enctype="text/plain"
+        >
+
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="Name"
+                placeholder="Full name"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="Phone"
+                placeholder="(000) 000-0000"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="vehicle">Vehicle</label>
+              <input
+                type="text"
+                id="vehicle"
+                name="Vehicle"
+                placeholder="Example: 2018 Ford F-150"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="service">Service</label>
+
+              <select
+                id="service"
+                name="Service"
+                required
+              >
+                <option value="">Select a service</option>
+                <option>Complete Interior Reset - $150</option>
+                <option>Resale Preparation</option>
+                <option>Other / Ask Us</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="date">Preferred Date</label>
+
+              <input
+                type="date"
+                id="date"
+                name="Preferred Date"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="time">Preferred Time</label>
+
+              <select
+                id="time"
+                name="Preferred Time"
+                required
+              >
+                <option value="">Select a time</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="location">Service Location</label>
+
+              <input
+                type="text"
+                id="location"
+                name="Service Location"
+                placeholder="City or address where the vehicle will be"
+                required
+              >
+            </div>
+
+            <div class="field full">
+              <label for="details">Vehicle Condition / Additional Details</label>
+
+              <textarea
+                id="details"
+                name="Details"
+                placeholder="Tell us anything we should know about the vehicle, stains, pet hair, heavy dirt, etc."
+              ></textarea>
+            </div>
+
+          </div>
+
+          <div class="notice">
+            Submitting this request does not guarantee the appointment time.
+            Twin Turbo Detailers will contact you to confirm availability.
+          </div>
+
+          <div class="button-row">
+
+            <a
+              href="sms:9862089586"
+              class="btn btn-secondary"
+            >
+              Text Us Instead
+            </a>
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+            >
+              Request Availability
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+
+      <div class="eyebrow">
+        Twin Turbo Detailers
+      </div>
+
+      <h2>
+        Bringing Your Vehicle Back to Life.
+      </h2>
+
+      <p>
+        Prefer to talk directly? Call or text us.
+      </p>
+
+      <a
+        href="tel:9862089586"
+        class="phone"
+      >
+        986-208-9586
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Twin Turbo Detailers. Precision Shine. Every Time.
+  </div>
+</footer>
+
+</body>
+</html>
