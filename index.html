@@ -670,10 +670,23 @@
 
     .phone {
       display: inline-block;
-      margin-bottom: 25px;
+      margin-bottom: 12px;
       font-size: clamp(28px, 5vw, 46px);
       font-weight: 900;
       color: #5db6ff;
+    }
+
+    .email {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #c9d3dd;
+      font-size: 16px;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .email:hover {
+      color: #55adff;
     }
 
     footer {
@@ -864,6 +877,11 @@
 
       .area-box {
         padding: 34px 20px;
+      }
+
+      .email {
+        font-size: 14px;
+        word-break: break-word;
       }
     }
   </style>
@@ -1803,7 +1821,7 @@
           <div class="faq-answer">
             Use our Availability & Quote page to build your free estimate,
             choose your service, and send us your preferred date and time.
-            You can also call or text us directly.
+            You can also call, text, or email us directly.
           </div>
 
         </details>
@@ -1843,8 +1861,8 @@
       </h2>
 
       <p>
-        Get a free estimate online or call or text Twin Turbo Detailers
-        directly.
+        Get a free estimate online or call, text, or email
+        Twin Turbo Detailers directly.
       </p>
 
       <a
@@ -1852,6 +1870,15 @@
         href="tel:9862089586"
       >
         986-208-9586
+      </a>
+
+      <br>
+
+      <a
+        class="email"
+        href="mailto:hm.market.solutions@gmail.com"
+      >
+        hm.market.solutions@gmail.com
       </a>
 
       <br>
@@ -1873,7 +1900,18 @@
 <footer>
 
   <div class="container">
+
     © 2026 Twin Turbo Detailers. All rights reserved.
+
+    <br>
+
+    <a
+      href="mailto:hm.market.solutions@gmail.com"
+      style="display:inline-block; margin-top:8px; color:#8b9bab;"
+    >
+      hm.market.solutions@gmail.com
+    </a>
+
   </div>
 
 </footer>
