@@ -257,7 +257,6 @@
       color: #55adff;
       font-size: 13px;
       font-weight: 900;
-      letter-spacing: 1px;
     }
 
     .service-card h3 {
@@ -319,19 +318,19 @@
       margin-right: 8px;
     }
 
-    /* BEFORE AFTER */
+    /* RESULTS */
 
     .results {
       background: #080d14;
     }
 
     .comparison {
-      margin-bottom: 55px;
+      margin-bottom: 60px;
     }
 
     .comparison-title {
-      font-size: 24px;
-      margin-bottom: 16px;
+      font-size: 28px;
+      margin-bottom: 18px;
     }
 
     .before-after {
@@ -368,12 +367,12 @@
     }
 
     .before-label {
-      background: rgba(20, 25, 31, 0.82);
+      background: rgba(20, 25, 31, 0.84);
       border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .after-label {
-      background: rgba(22, 140, 255, 0.88);
+      background: rgba(22, 140, 255, 0.9);
       border: 1px solid rgba(135, 204, 255, 0.8);
     }
 
@@ -392,7 +391,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* MOBILE */
+    /* MOBILE SERVICE */
 
     .mobile {
       background:
@@ -450,6 +449,8 @@
       font-size: 13px;
     }
 
+    /* MOBILE */
+
     @media (max-width: 850px) {
       nav {
         display: none;
@@ -460,7 +461,7 @@
         background:
           linear-gradient(
             180deg,
-            rgba(5,8,13,.40),
+            rgba(5,8,13,.35),
             rgba(5,8,13,.94) 74%
           ),
           url("IMG_0952.jpeg") center / cover no-repeat;
@@ -479,12 +480,8 @@
         grid-template-columns: 1fr;
       }
 
-      .before-after {
-        grid-template-columns: 1fr 1fr;
-      }
-
       .photo-card img {
-        height: 390px;
+        height: 440px;
       }
 
       .gallery-grid {
@@ -507,7 +504,6 @@
 
       .photo-card img {
         height: auto;
-        max-height: none;
         object-fit: contain;
       }
 
@@ -562,7 +558,6 @@
   </div>
 </header>
 
-
 <main id="top">
 
   <!-- HERO -->
@@ -583,7 +578,7 @@
         <p>
           Twin Turbo Detailers brings professional interior detailing
           directly to your driveway. Whether you're preparing your vehicle
-          for resale or just want it looking fresh again, we'll bring it
+          for resale or simply want it looking fresh again, we'll bring it
           back to life.
         </p>
 
@@ -600,7 +595,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- SERVICES -->
 
@@ -645,21 +639,23 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
-
-  <!-- $150 OFFER -->
+  <!-- PRICE -->
 
   <section class="offer">
     <div class="container">
 
       <div class="offer-box">
 
-        <div class="eyebrow">Complete Interior Reset</div>
+        <div class="eyebrow">
+          Complete Interior Reset
+        </div>
 
-        <div class="price">$150</div>
+        <div class="price">
+          $150
+        </div>
 
         <p>
           A flat-rate interior detailing service built for drivers who want
@@ -684,8 +680,7 @@
     </div>
   </section>
 
-
-  <!-- BEFORE / AFTER -->
+  <!-- BEFORE AND AFTER -->
 
   <section class="results" id="results">
     <div class="container">
@@ -694,10 +689,9 @@
         <span>Real Results</span>
         <h2>Before & After</h2>
         <p>
-          Real vehicle. Real dirt. Real transformation.
+          See the difference a proper interior detail can make.
         </p>
       </div>
-
 
       <!-- FRONT DRIVER -->
 
@@ -710,26 +704,31 @@
         <div class="before-after">
 
           <div class="photo-card">
-            <div class="photo-label before-label">Before</div>
+            <div class="photo-label before-label">
+              Before
+            </div>
+
             <img
               src="IMG_0947.jpeg"
-              alt="Front interior before detailing"
+              alt="Front driver area before detailing"
               loading="lazy"
             >
           </div>
 
           <div class="photo-card">
-            <div class="photo-label after-label">After</div>
+            <div class="photo-label after-label">
+              After
+            </div>
+
             <img
               src="IMG_0946.jpeg"
-              alt="Front interior after detailing"
+              alt="Front driver area after detailing"
               loading="lazy"
             >
           </div>
 
         </div>
       </div>
-
 
       <!-- REAR -->
 
@@ -742,26 +741,31 @@
         <div class="before-after">
 
           <div class="photo-card">
-            <div class="photo-label before-label">Before</div>
+            <div class="photo-label before-label">
+              Before
+            </div>
+
             <img
               src="IMG_0948.jpeg"
-              alt="Rear interior before detailing"
+              alt="Rear seats before detailing"
               loading="lazy"
             >
           </div>
 
           <div class="photo-card">
-            <div class="photo-label after-label">After</div>
+            <div class="photo-label after-label">
+              After
+            </div>
+
             <img
               src="IMG_0955.jpeg"
-              alt="Rear interior after detailing"
+              alt="Rear seats after detailing"
               loading="lazy"
             >
           </div>
 
         </div>
       </div>
-
 
       <!-- PASSENGER -->
 
@@ -774,7 +778,10 @@
         <div class="before-after">
 
           <div class="photo-card">
-            <div class="photo-label before-label">Before</div>
+            <div class="photo-label before-label">
+              Before
+            </div>
+
             <img
               src="IMG_0949.jpeg"
               alt="Passenger side before detailing"
@@ -783,7 +790,10 @@
           </div>
 
           <div class="photo-card">
-            <div class="photo-label after-label">After</div>
+            <div class="photo-label after-label">
+              After
+            </div>
+
             <img
               src="IMG_0957.jpeg"
               alt="Passenger side after detailing"
@@ -797,8 +807,7 @@
     </div>
   </section>
 
-
-  <!-- GALLERY -->
+  <!-- FINISHED GALLERY -->
 
   <section id="gallery">
     <div class="container">
@@ -807,7 +816,7 @@
         <span>Finished Work</span>
         <h2>Showroom-Ready Interior</h2>
         <p>
-          A few more angles from the finished detail.
+          More angles from the finished detail.
         </p>
       </div>
 
@@ -815,25 +824,19 @@
 
         <img
           src="IMG_0951.jpeg"
-          alt="Detailed dashboard and front cabin"
+          alt="Clean front cabin"
           loading="lazy"
         >
 
         <img
           src="IMG_0952.jpeg"
-          alt="Detailed driver side interior"
+          alt="Clean driver side interior"
           loading="lazy"
         >
 
         <img
           src="IMG_0956.jpeg"
-          alt="Detailed rear interior"
-          loading="lazy"
-        >
-
-        <img
-          src="IMG_0950.jpeg"
-          alt="Vehicle interior before detailing"
+          alt="Clean rear interior"
           loading="lazy"
         >
 
@@ -842,7 +845,6 @@
     </div>
   </section>
 
-
   <!-- MOBILE SERVICE -->
 
   <section class="mobile">
@@ -850,7 +852,9 @@
 
       <div class="mobile-box">
 
-        <div class="eyebrow">We Come To You</div>
+        <div class="eyebrow">
+          We Come To You
+        </div>
 
         <h2>
           Professional detailing without leaving your driveway.
@@ -870,13 +874,14 @@
     </div>
   </section>
 
-
   <!-- CONTACT -->
 
   <section class="contact" id="contact">
     <div class="container">
 
-      <div class="eyebrow">Book Your Detail</div>
+      <div class="eyebrow">
+        Book Your Detail
+      </div>
 
       <h2>
         Bring Your Vehicle Back to Life.
@@ -900,7 +905,6 @@
   </section>
 
 </main>
-
 
 <footer>
   <div class="container">
