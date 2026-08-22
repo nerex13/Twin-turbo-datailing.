@@ -41,95 +41,124 @@
 
     .container {
       width: min(1120px, calc(100% - 32px));
-      margin: auto;
+      margin: 0 auto;
     }
 
-    /* HEADER */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title span {
+      color: #22a8ff;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .section-title h2 {
+      font-size: clamp(32px, 6vw, 52px);
+      margin-top: 8px;
+      line-height: 1.05;
+    }
+
+    .section-title p {
+      max-width: 650px;
+      margin: 14px auto 0;
+      color: #aeb7c3;
+    }
 
     header {
-      background: rgba(5, 8, 13, 0.96);
-      border-bottom: 1px solid #26364f;
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: rgba(5, 8, 13, 0.95);
+      border-bottom: 1px solid #26313d;
       backdrop-filter: blur(12px);
     }
 
     .nav {
-      min-height: 76px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 20px;
     }
 
-    .logo-wrap {
+    .brand {
       display: flex;
       align-items: center;
       gap: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
     }
 
-    .logo-mark {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      border: 2px solid #b9c8d8;
-      background:
-        linear-gradient(145deg, #192538, #05080d);
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      line-height: 1.05;
+    }
+
+    .brand-text strong {
+      display: block;
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    .brand-text span {
+      color: #22a8ff;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    nav {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: 950;
-      color: #2196f3;
-      box-shadow:
-        inset 0 0 0 3px #0c1420,
-        0 0 18px rgba(33, 150, 243, 0.22);
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 700;
     }
 
-    .logo-text {
-      font-size: 19px;
-      font-weight: 900;
-      letter-spacing: 0.7px;
-      text-transform: uppercase;
+    nav a {
+      color: #c4ccd5;
     }
 
-    .logo-text span {
-      color: #2196f3;
+    nav a:hover {
+      color: #22a8ff;
     }
 
-    .nav-call {
-      background: linear-gradient(135deg, #168cff, #006bd6);
-      color: white;
-      padding: 11px 18px;
-      border-radius: 10px;
-      font-weight: 800;
-      transition: 0.2s ease;
-      box-shadow: 0 8px 25px rgba(22, 140, 255, 0.22);
+    .call-button {
+      background: linear-gradient(135deg, #1597ec, #35b8ff);
+      color: #ffffff;
+      padding: 11px 17px;
+      border-radius: 8px;
+      box-shadow: 0 0 25px rgba(34,168,255,.22);
     }
-
-    .nav-call:hover {
-      transform: translateY(-2px);
-      background: #43a9ff;
-    }
-
-    /* HERO */
 
     .hero {
-      position: relative;
-      min-height: 650px;
+      min-height: 720px;
       display: flex;
       align-items: center;
+      position: relative;
       overflow: hidden;
-
       background:
         linear-gradient(
           90deg,
-          rgba(3, 7, 13, 0.99) 0%,
-          rgba(3, 7, 13, 0.91) 42%,
-          rgba(3, 7, 13, 0.35) 100%
+          rgba(3,6,10,.97) 0%,
+          rgba(3,6,10,.91) 38%,
+          rgba(3,6,10,.56) 70%,
+          rgba(3,6,10,.35) 100%
         ),
-        url("IMG_0946.jpeg") center/cover no-repeat;
+        url("images/after-1.jpg") center / cover no-repeat;
     }
 
     .hero::after {
@@ -139,8 +168,8 @@
       background:
         radial-gradient(
           circle at 75% 45%,
-          rgba(33, 150, 243, 0.12),
-          transparent 38%
+          rgba(34,168,255,.12),
+          transparent 35%
         );
       pointer-events: none;
     }
@@ -152,353 +181,432 @@
       padding: 90px 0;
     }
 
-    .eyebrow {
-      color: #45aaff;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      font-size: 14px;
-    }
-
-    h1 {
-      font-size: clamp(46px, 8vw, 82px);
-      line-height: 0.98;
-      text-transform: uppercase;
-      font-weight: 950;
-      letter-spacing: -2px;
+    .hero-logo {
+      width: 145px;
       margin-bottom: 22px;
+      filter: drop-shadow(0 0 18px rgba(34,168,255,.25));
     }
 
-    h1 span {
-      color: #2196f3;
+    .eyebrow {
+      display: inline-block;
+      color: #22a8ff;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 8vw, 82px);
+      line-height: .98;
+      letter-spacing: -3px;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 span {
+      color: #22a8ff;
     }
 
     .hero p {
       max-width: 610px;
-      font-size: 19px;
-      color: #d6deea;
+      color: #c2cad4;
+      font-size: 18px;
       margin-bottom: 30px;
     }
 
-    .buttons {
+    .hero-buttons {
       display: flex;
+      gap: 13px;
       flex-wrap: wrap;
-      gap: 12px;
     }
 
     .btn {
       display: inline-block;
-      padding: 15px 24px;
-      border-radius: 11px;
-      font-weight: 900;
-      transition: 0.2s ease;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: 800;
+      transition: .2s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #168cff, #006bd6);
-      color: white;
-      box-shadow: 0 10px 30px rgba(22, 140, 255, 0.22);
-    }
-
-    .btn-primary:hover {
-      background: #42a9ff;
-      transform: translateY(-2px);
+      background: linear-gradient(135deg, #1597ec, #39bdff);
+      color: #ffffff;
     }
 
     .btn-secondary {
-      border: 1px solid #60728e;
-      background: rgba(5, 8, 13, 0.72);
-      color: white;
+      border: 1px solid #71808f;
+      background: rgba(15,21,29,.75);
+      color: #ffffff;
     }
 
-    .btn-secondary:hover {
-      border-color: #2196f3;
+    .btn:hover {
       transform: translateY(-2px);
     }
 
-    /* TRUST BAR */
-
-    .trust {
-      background: #0b111c;
-      border-top: 1px solid #182238;
-      border-bottom: 1px solid #182238;
+    .trust-bar {
+      border-top: 1px solid #24303b;
+      border-bottom: 1px solid #24303b;
+      background: #0b1118;
     }
 
     .trust-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      text-align: center;
     }
 
     .trust-item {
+      text-align: center;
       padding: 25px 15px;
-      border-right: 1px solid #182238;
-      font-weight: 800;
+      border-right: 1px solid #24303b;
     }
 
     .trust-item:last-child {
-      border-right: none;
+      border-right: 0;
     }
 
     .trust-item strong {
       display: block;
-      color: #2196f3;
-      font-size: 21px;
-      margin-bottom: 4px;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 90px 0;
-    }
-
-    .section-heading {
-      max-width: 750px;
-      margin-bottom: 45px;
-    }
-
-    .section-heading small {
-      display: block;
-      color: #2196f3;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(34px, 5vw, 52px);
-      text-transform: uppercase;
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
-    .section-heading p {
-      color: #aeb9c9;
+      color: #22a8ff;
       font-size: 18px;
+      margin-bottom: 2px;
     }
 
-    /* SERVICES */
+    .trust-item span {
+      color: #aeb7c3;
+      font-size: 13px;
+    }
 
     .services {
-      background: #080d15;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(34,168,255,.08), transparent 30%),
+        #080d13;
     }
 
     .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 18px;
     }
 
-    .card {
-      background:
-        linear-gradient(145deg, #111b2a, #0b111b);
-      border: 1px solid #26364f;
-      border-radius: 18px;
+    .service-card {
+      background: linear-gradient(145deg, #101821, #0b1118);
+      border: 1px solid #2a3643;
       padding: 30px;
-      transition: 0.25s ease;
+      border-radius: 14px;
+      min-height: 220px;
+      box-shadow: 0 12px 35px rgba(0,0,0,.2);
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: #2196f3;
+    .service-number {
+      color: #22a8ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
 
-    .card .number {
-      font-size: 38px;
-      color: #2196f3;
-      font-weight: 950;
-      margin-bottom: 15px;
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 23px;
     }
 
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
+    .service-card p {
+      color: #aab4bf;
     }
 
-    .card p {
-      color: #aeb9c9;
-    }
-
-    .price {
-      margin-top: 20px;
-      font-size: 28px;
-      font-weight: 950;
-      color: #ffffff;
-    }
-
-    /* BEFORE / AFTER */
-
-    .results {
+    .price-section {
       background: #05080d;
     }
 
-    .gallery {
+    .price-card {
+      max-width: 860px;
+      margin: auto;
+      padding: 42px;
+      border: 1px solid #34414f;
+      background:
+        linear-gradient(145deg, rgba(34,168,255,.07), transparent 45%),
+        #0b1118;
+      border-radius: 16px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .price-card h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .price-card p {
+      color: #adb6c0;
+    }
+
+    .included {
+      margin-top: 18px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+      gap: 8px;
+      font-size: 14px;
+      color: #d8dde3;
+    }
+
+    .included div::before {
+      content: "✓";
+      color: #22a8ff;
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    .price {
+      text-align: center;
+      min-width: 170px;
+    }
+
+    .price small {
+      display: block;
+      color: #9faab5;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .price strong {
+      font-size: 60px;
+      line-height: 1;
+      color: #ffffff;
+    }
+
+    .results {
+      background: #080d13;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
     }
 
     .comparison {
-      background: #0d1420;
-      border: 1px solid #25354e;
-      border-radius: 18px;
+      background: #0d141c;
+      border: 1px solid #2b3744;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
     }
 
     .comparison-title {
-      padding: 18px 20px;
-      font-weight: 900;
-      font-size: 18px;
-      border-bottom: 1px solid #1d2a40;
+      padding: 19px 22px;
+      font-weight: 800;
+      font-size: 19px;
+      border-bottom: 1px solid #2a3642;
     }
 
-    .pair {
+    .comparison-images {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
 
-    .photo {
+    .image-box {
       position: relative;
-      min-width: 0;
+      min-height: 430px;
       overflow: hidden;
     }
 
-    .photo img {
-      width: 100%;
-      height: 270px;
-      object-fit: cover;
-      transition: transform 0.35s ease;
+    .image-box:first-child {
+      border-right: 2px solid #22a8ff;
     }
 
-    .photo:hover img {
-      transform: scale(1.03);
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
     }
 
     .label {
       position: absolute;
-      left: 10px;
-      bottom: 10px;
-      padding: 6px 11px;
-      border-radius: 7px;
+      top: 15px;
+      left: 15px;
+      background: rgba(3,6,10,.88);
+      border: 1px solid #596573;
+      padding: 7px 12px;
+      border-radius: 6px;
       font-size: 12px;
       font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background: rgba(3, 7, 13, 0.88);
-      border: 1px solid #4a5c78;
+      letter-spacing: 2px;
     }
 
     .after-label {
-      background: #168cff;
-      border-color: #168cff;
+      color: #ffffff;
+      border-color: #22a8ff;
+      background: rgba(16,135,208,.9);
     }
 
-    /* WHY */
-
-    .why {
-      background: #080d15;
+    .why-us {
+      background: #05080d;
     }
 
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 18px;
     }
 
-    .why-item {
-      background: #0e1623;
-      border: 1px solid #26364f;
-      padding: 25px;
-      border-radius: 15px;
+    .why-card {
+      border-top: 2px solid #22a8ff;
+      background: #0c1219;
+      padding: 28px;
     }
 
-    .why-item h3 {
+    .why-card h3 {
       margin-bottom: 8px;
-      color: #fff;
     }
 
-    .why-item p {
-      color: #aeb9c9;
+    .why-card p {
+      color: #aab4bf;
     }
-
-    /* CTA */
 
     .cta {
       text-align: center;
       background:
-        radial-gradient(
-          circle at center,
-          rgba(33,150,243,0.19),
-          transparent 55%
-        ),
-        #05080d;
-    }
-
-    .cta-box {
-      border: 1px solid #2d4667;
-      padding: 60px 25px;
-      border-radius: 22px;
-      background: rgba(11, 18, 29, 0.9);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        linear-gradient(rgba(3,7,12,.88), rgba(3,7,12,.95)),
+        url("images/after-5.jpg") center / cover no-repeat;
+      border-top: 1px solid #283542;
     }
 
     .cta h2 {
-      font-size: clamp(36px, 5vw, 58px);
+      font-size: clamp(38px, 7vw, 65px);
       text-transform: uppercase;
-      line-height: 1;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .cta p {
-      color: #b7c2d1;
-      max-width: 700px;
-      margin: 0 auto 26px;
-      font-size: 18px;
+      color: #b8c1cb;
+      max-width: 610px;
+      margin: 0 auto 25px;
     }
 
-    /* FOOTER */
+    .phone {
+      font-size: clamp(26px, 6vw, 42px);
+      color: #22a8ff;
+      font-weight: 900;
+      display: block;
+      margin-bottom: 25px;
+    }
 
     footer {
-      background: #030509;
-      border-top: 1px solid #182238;
       padding: 30px 0;
-      text-align: center;
-      color: #8996a8;
-      font-size: 14px;
+      border-top: 1px solid #27323d;
+      background: #030609;
     }
 
-    /* MOBILE */
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-    @media (max-width: 800px) {
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+    }
 
-      .logo-text {
-        font-size: 15px;
-      }
+    .footer-logo img {
+      width: 48px;
+    }
 
-      .logo-mark {
-        width: 46px;
-        height: 46px;
-        font-size: 17px;
-      }
+    .footer-copy {
+      color: #7e8994;
+      font-size: 13px;
+    }
 
-      .nav-call {
-        font-size: 13px;
-        padding: 9px 12px;
+    @media (max-width: 820px) {
+      nav a:not(.call-button) {
+        display: none;
       }
 
       .hero {
-        min-height: 590px;
-
+        min-height: 650px;
         background:
           linear-gradient(
-            rgba(3, 7, 13, 0.76),
-            rgba(3, 7, 13, 0.97)
+            rgba(3,6,10,.80),
+            rgba(3,6,10,.92)
           ),
-          url("IMG_0946.jpeg") center/cover no-repeat;
+          url("images/after-1.jpg") center / cover no-repeat;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .service-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price-card {
+        grid-template-columns: 1fr;
+      }
+
+      .price {
+        text-align: left;
+      }
+
+      .comparison-images {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .image-box,
+      .image-box img {
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 22px, 1120px);
+      }
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .brand img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .brand-text strong {
+        font-size: 12px;
+      }
+
+      .brand-text span {
+        font-size: 9px;
+      }
+
+      .call-button {
+        padding: 9px 11px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 610px;
+      }
+
+      .hero-content {
+        padding: 65px 0;
+      }
+
+      .hero-logo {
+        width: 115px;
+      }
+
+      .hero p {
+        font-size: 16px;
       }
 
       .trust-grid {
@@ -506,62 +614,38 @@
       }
 
       .trust-item {
-        border-right: none;
-        border-bottom: 1px solid #182238;
+        border-right: 0;
+        border-bottom: 1px solid #24303b;
       }
 
-      .service-grid,
-      .gallery,
-      .why-grid {
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .price-card {
+        padding: 25px;
+      }
+
+      .included {
         grid-template-columns: 1fr;
       }
 
-      .photo img {
-        height: 230px;
-      }
-
-      section {
-        padding: 65px 0;
-      }
-    }
-
-    @media (max-width: 500px) {
-
-      .logo-text {
-        font-size: 13px;
-      }
-
-      .nav {
-        gap: 8px;
-      }
-
-      .nav-call {
-        font-size: 12px;
-      }
-
-      h1 {
-        font-size: 48px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        text-align: center;
-        width: 100%;
-      }
-
-      .pair {
+      .comparison-images {
         grid-template-columns: 1fr 1fr;
       }
 
-      .photo img {
-        height: 180px;
+      .image-box,
+      .image-box img {
+        min-height: 250px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
@@ -569,42 +653,41 @@
 
 <body>
 
-  <!-- HEADER -->
+<header>
+  <div class="container nav">
+    <a href="#top" class="brand">
+      <img src="images/logo.png" alt="Twin Turbo Detailers logo">
 
-  <header>
-    <div class="container nav">
+      <div class="brand-text">
+        <strong>TWIN TURBO</strong>
+        <span>DETAILERS</span>
+      </div>
+    </a>
 
-      <a href="#" class="logo-wrap">
-
-        <div class="logo-mark">
-          TT
-        </div>
-
-        <div class="logo-text">
-          Twin Turbo <span>Detailers</span>
-        </div>
-
-      </a>
-
-      <a class="nav-call" href="tel:9862089586">
+    <nav>
+      <a href="#service">Service</a>
+      <a href="#results">Results</a>
+      <a class="call-button" href="tel:9862089586">
         Call 986-208-9586
       </a>
+    </nav>
+  </div>
+</header>
 
-    </div>
-  </header>
 
-
-  <!-- HERO -->
+<main id="top">
 
   <section class="hero">
-
     <div class="container">
-
       <div class="hero-content">
 
-        <div class="eyebrow">
-          Mobile Auto Detailing
-        </div>
+        <img
+          class="hero-logo"
+          src="images/logo.png"
+          alt="Twin Turbo Detailers"
+        >
+
+        <span class="eyebrow">Mobile Auto Detailing</span>
 
         <h1>
           Bring Your Vehicle
@@ -612,537 +695,369 @@
         </h1>
 
         <p>
-          Professional mobile detailing brought directly to your driveway.
-          We deep clean your vehicle so it looks sharp, feels fresh, and is
-          ready to impress.
+          Professional mobile interior detailing brought directly
+          to your driveway. We bring the equipment and the attention
+          to detail your vehicle deserves.
         </p>
 
-        <div class="buttons">
-
-          <a
-            class="btn btn-primary"
-            href="tel:9862089586"
-          >
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="tel:9862089586">
             Book Your Detail
           </a>
 
-          <a
-            class="btn btn-secondary"
-            href="#results"
-          >
+          <a class="btn btn-secondary" href="#results">
             See Before & Afters
           </a>
-
         </div>
 
       </div>
     </div>
-
   </section>
 
 
-  <!-- TRUST -->
-
-  <div class="trust">
-
+  <section class="trust-bar">
     <div class="container trust-grid">
 
       <div class="trust-item">
-        <strong>Mobile</strong>
-        We Come To You
-      </div>
-
-      <div class="trust-item">
         <strong>$150</strong>
-        Interior Reset
+        <span>Complete Interior Reset</span>
       </div>
 
       <div class="trust-item">
-        <strong>Professional</strong>
-        Detail-Focused Results
+        <strong>Mobile Service</strong>
+        <span>We Come Directly To You</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Resale Ready</strong>
+        <span>Make Your Vehicle Stand Out</span>
       </div>
 
     </div>
+  </section>
 
-  </div>
 
-
-  <!-- SERVICES -->
-
-  <section class="services" id="services">
-
+  <section class="section services" id="service">
     <div class="container">
 
-      <div class="section-heading">
-
-        <small>
-          Our Service
-        </small>
-
-        <h2>
-          Precision Shine.<br>
-          Every Time.
-        </h2>
-
+      <div class="section-title">
+        <span>Precision Shine. Every Time.</span>
+        <h2>Make the First Impression Count.</h2>
         <p>
-          Whether you're getting your daily driver cleaned up or preparing
-          a vehicle for resale, Twin Turbo Detailers gives the interior the
-          attention it deserves.
+          Whether you're keeping your vehicle or getting it ready
+          to sell, a professionally cleaned interior changes the
+          entire impression.
         </p>
-
       </div>
-
 
       <div class="service-grid">
 
-        <div class="card">
-
-          <div class="number">
-            01
-          </div>
-
-          <h3>
-            Complete Interior Reset
-          </h3>
-
+        <article class="service-card">
+          <div class="service-number">01 / INTERIOR</div>
+          <h3>Complete Interior Reset</h3>
           <p>
-            Deep cleaning of the dashboard, seats, carpets, floor mats,
-            center console, doors, cupholders, trunk, and other interior
-            surfaces.
+            A deep clean of the seats, carpets, mats, dashboard,
+            console, doors and cargo areas.
           </p>
+        </article>
 
-          <div class="price">
-            $150
-          </div>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="number">
-            02
-          </div>
-
-          <h3>
-            Resale Preparation
-          </h3>
-
+        <article class="service-card">
+          <div class="service-number">02 / RESALE</div>
+          <h3>Resale Preparation</h3>
           <p>
-            Selling your vehicle? A clean interior makes your listing look
-            better, improves first impressions, and helps your vehicle show
-            at its best for potential buyers.
+            Give Marketplace buyers a cleaner, sharper first
+            impression and present your vehicle at its best.
           </p>
+        </article>
 
-        </div>
-
-
-        <div class="card">
-
-          <div class="number">
-            03
-          </div>
-
-          <h3>
-            Mobile Convenience
-          </h3>
-
+        <article class="service-card">
+          <div class="service-number">03 / MOBILE</div>
+          <h3>Mobile Convenience</h3>
           <p>
-            We bring our specialized equipment directly to your driveway.
-            All we need from you is access to a standard outdoor power
-            outlet.
+            We bring our specialized equipment directly to your
+            driveway. All we need is access to a standard outdoor
+            power outlet.
           </p>
-
-        </div>
+        </article>
 
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- BEFORE & AFTER -->
-
-  <section class="results" id="results">
-
+  <section class="section price-section">
     <div class="container">
 
-      <div class="section-heading">
+      <div class="price-card">
 
-        <small>
-          Real Results
-        </small>
+        <div>
+          <span class="eyebrow">Complete Interior Reset</span>
 
-        <h2>
-          See The Difference.
-        </h2>
+          <h3>Your Interior, Reset.</h3>
 
+          <p>
+            A complete mobile interior cleaning designed to make
+            your vehicle feel refreshed and ready for its next
+            drive or next buyer.
+          </p>
+
+          <div class="included">
+            <div>Seats</div>
+            <div>Dashboard</div>
+            <div>Center Console</div>
+            <div>Carpets</div>
+            <div>Floor Mats</div>
+            <div>Door Panels</div>
+            <div>Trunk / Cargo Area</div>
+            <div>Interior Surfaces</div>
+          </div>
+        </div>
+
+        <div class="price">
+          <small>Starting At</small>
+          <strong>$150</strong>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section results" id="results">
+    <div class="container">
+
+      <div class="section-title">
+        <span>Transformations</span>
+        <h2>Before & After</h2>
         <p>
-          Real before-and-after results from Twin Turbo Detailers.
+          Real results from a Twin Turbo interior detail.
         </p>
-
       </div>
 
 
-      <div class="gallery">
+      <div class="comparison-grid">
 
-
-        <!-- PAIR 1 -->
-
-        <div class="comparison">
-
+        <article class="comparison">
           <div class="comparison-title">
-            Interior Transformation
+            Driver Side Front
           </div>
 
-          <div class="pair">
+          <div class="comparison-images">
 
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label">BEFORE</span>
               <img
-                src="IMG_0946.jpeg"
-                alt="Vehicle interior before detailing"
-                loading="lazy"
+                src="images/before-1.jpg"
+                alt="Driver side interior before detailing"
               >
-
-              <div class="label">
-                Before
-              </div>
-
             </div>
 
-
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label after-label">AFTER</span>
               <img
-                src="IMG_0947.jpeg"
-                alt="Vehicle interior after detailing"
-                loading="lazy"
+                src="images/after-1.jpg"
+                alt="Driver side interior after detailing"
               >
-
-              <div class="label after-label">
-                After
-              </div>
-
             </div>
 
           </div>
+        </article>
 
-        </div>
 
-
-        <!-- PAIR 2 -->
-
-        <div class="comparison">
-
+        <article class="comparison">
           <div class="comparison-title">
-            Interior Detail
+            Rear Interior
           </div>
 
-          <div class="pair">
+          <div class="comparison-images">
 
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label">BEFORE</span>
               <img
-                src="IMG_0948.jpeg"
-                alt="Vehicle before detailing"
-                loading="lazy"
+                src="images/before-2.jpg"
+                alt="Rear interior before detailing"
               >
-
-              <div class="label">
-                Before
-              </div>
-
             </div>
 
-
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label after-label">AFTER</span>
               <img
-                src="IMG_0949.jpeg"
-                alt="Vehicle after detailing"
-                loading="lazy"
+                src="images/after-2.jpg"
+                alt="Rear interior after detailing"
               >
-
-              <div class="label after-label">
-                After
-              </div>
-
             </div>
 
           </div>
+        </article>
 
-        </div>
 
-
-        <!-- PAIR 3 -->
-
-        <div class="comparison">
-
+        <article class="comparison">
           <div class="comparison-title">
-            Deep Clean
+            Rear Interior Opposite Angle
           </div>
 
-          <div class="pair">
+          <div class="comparison-images">
 
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label">BEFORE</span>
               <img
-                src="IMG_0950.jpeg"
-                alt="Vehicle before deep cleaning"
-                loading="lazy"
+                src="images/before-3.jpg"
+                alt="Rear seat area before detailing"
               >
-
-              <div class="label">
-                Before
-              </div>
-
             </div>
 
-
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label after-label">AFTER</span>
               <img
-                src="IMG_0951.jpeg"
-                alt="Vehicle after deep cleaning"
-                loading="lazy"
+                src="images/after-3.jpg"
+                alt="Rear seat area after detailing"
               >
-
-              <div class="label after-label">
-                After
-              </div>
-
             </div>
 
           </div>
+        </article>
 
-        </div>
 
-
-        <!-- PAIR 4 -->
-
-        <div class="comparison">
-
+        <article class="comparison">
           <div class="comparison-title">
-            Interior Cleanup
+            Passenger Side Front
           </div>
 
-          <div class="pair">
+          <div class="comparison-images">
 
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label">BEFORE</span>
               <img
-                src="IMG_0952.jpeg"
-                alt="Vehicle interior before cleaning"
-                loading="lazy"
+                src="images/before-4.jpg"
+                alt="Passenger side interior before detailing"
               >
-
-              <div class="label">
-                Before
-              </div>
-
             </div>
 
-
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label after-label">AFTER</span>
               <img
-                src="IMG_0955.jpeg"
-                alt="Vehicle interior after cleaning"
-                loading="lazy"
+                src="images/after-4.jpg"
+                alt="Passenger side interior after detailing"
               >
-
-              <div class="label after-label">
-                After
-              </div>
-
             </div>
 
           </div>
+        </article>
 
-        </div>
 
-
-        <!-- PAIR 5 -->
-
-        <div class="comparison">
-
+        <article class="comparison">
           <div class="comparison-title">
-            Detail Transformation
+            Full Front Interior
           </div>
 
-          <div class="pair">
+          <div class="comparison-images">
 
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label">BEFORE</span>
               <img
-                src="IMG_0956.jpeg"
-                alt="Vehicle before detailing"
-                loading="lazy"
+                src="images/before-5.jpg"
+                alt="Full front interior before detailing"
               >
-
-              <div class="label">
-                Before
-              </div>
-
             </div>
 
-
-            <div class="photo">
-
+            <div class="image-box">
+              <span class="label after-label">AFTER</span>
               <img
-                src="IMG_0957.jpeg"
-                alt="Vehicle after detailing"
-                loading="lazy"
+                src="images/after-5.jpg"
+                alt="Full front interior after detailing"
               >
-
-              <div class="label after-label">
-                After
-              </div>
-
             </div>
 
           </div>
-
-        </div>
-
+        </article>
 
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- WHY US -->
-
-  <section class="why">
-
+  <section class="section why-us">
     <div class="container">
 
-      <div class="section-heading">
-
-        <small>
-          Why Twin Turbo
-        </small>
-
-        <h2>
-          Clean Meets Perfection.
-        </h2>
-
+      <div class="section-title">
+        <span>Twin Turbo Detailers</span>
+        <h2>Professional. Mobile. Detailed.</h2>
       </div>
-
 
       <div class="why-grid">
 
-        <div class="why-item">
-
-          <h3>
-            🚗 We Come To You
-          </h3>
-
+        <div class="why-card">
+          <h3>Attention to Detail</h3>
           <p>
-            Skip the waiting room. Our mobile setup lets us detail your
-            vehicle right at your home.
+            We focus on the areas buyers and drivers notice first,
+            from the carpets to the console.
           </p>
-
         </div>
 
-
-        <div class="why-item">
-
-          <h3>
-            🧼 Deep Interior Cleaning
-          </h3>
-
+        <div class="why-card">
+          <h3>Convenient Service</h3>
           <p>
-            We go beyond a quick vacuum and wipe-down to tackle the areas
-            that make the biggest visual difference.
+            No waiting room. No drop-off. We bring the detailing
+            setup directly to you.
           </p>
-
         </div>
 
-
-        <div class="why-item">
-
-          <h3>
-            💰 Great Before Selling
-          </h3>
-
+        <div class="why-card">
+          <h3>Built for Results</h3>
           <p>
-            Give potential buyers a strong first impression with a clean,
-            showroom-ready interior.
+            A cleaner vehicle photographs better, presents better
+            and simply feels better.
           </p>
-
-        </div>
-
-
-        <div class="why-item">
-
-          <h3>
-            ⚡ Simple Booking
-          </h3>
-
-          <p>
-            Call or text us directly and we'll get your vehicle on the
-            schedule.
-          </p>
-
         </div>
 
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- CTA -->
-
-  <section class="cta" id="contact">
-
+  <section class="section cta">
     <div class="container">
 
-      <div class="cta-box">
+      <span class="eyebrow">Twin Turbo Detailers</span>
 
-        <div class="eyebrow">
-          Ready For A Reset?
-        </div>
+      <h2>Ready For That Showroom Look?</h2>
 
-        <h2>
-          Bring Your Vehicle<br>
-          Back To Life.
-        </h2>
+      <p>
+        Call or text Twin Turbo Detailers to schedule your mobile
+        interior detail. Complete interior resets start at $150.
+      </p>
 
-        <p>
-          Call or text Twin Turbo Detailers to schedule your mobile detail.
-          Interior resets start at <strong>$150</strong>.
-        </p>
+      <a class="phone" href="tel:9862089586">
+        986-208-9586
+      </a>
 
-        <a
-          class="btn btn-primary"
-          href="tel:9862089586"
-        >
-          Call 986-208-9586
-        </a>
-
-      </div>
+      <a class="btn btn-primary" href="tel:9862089586">
+        Book Your Detail
+      </a>
 
     </div>
-
   </section>
 
+</main>
 
-  <!-- FOOTER -->
 
-  <footer>
+<footer>
+  <div class="container footer-inner">
 
-    <div class="container">
-      © 2026 Twin Turbo Detailers. All rights reserved.
+    <div class="footer-logo">
+      <img
+        src="images/logo.png"
+        alt="Twin Turbo Detailers logo"
+      >
+      <span>Twin Turbo Detailers</span>
     </div>
 
-  </footer>
+    <div class="footer-copy">
+      Professional Mobile Auto Detailing
+    </div>
+
+  </div>
+</footer>
 
 </body>
 </html>
