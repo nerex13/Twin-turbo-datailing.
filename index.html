@@ -48,23 +48,17 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-
       background: rgba(5, 8, 13, 0.96);
-
-      border-bottom:
-        1px solid rgba(120, 190, 255, 0.2);
-
+      border-bottom: 1px solid rgba(120, 190, 255, 0.2);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
 
     .nav {
       min-height: 82px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       gap: 20px;
     }
 
@@ -77,32 +71,22 @@
     .brand-logo {
       width: 64px;
       height: 64px;
-
       object-fit: cover;
-
       border-radius: 12px;
-
-      border:
-        1px solid rgba(215, 221, 229, 0.35);
-
-      box-shadow:
-        0 0 22px rgba(22, 140, 255, 0.28);
+      border: 1px solid rgba(215, 221, 229, 0.35);
+      box-shadow: 0 0 22px rgba(22, 140, 255, 0.28);
     }
 
     .brand-text strong {
       display: block;
-
       font-size: 18px;
       letter-spacing: 0.5px;
     }
 
     .brand-text span {
       display: block;
-
       color: #9ba8b8;
-
       font-size: 12px;
-
       letter-spacing: 1.6px;
       text-transform: uppercase;
     }
@@ -111,9 +95,7 @@
       display: flex;
       gap: 22px;
       align-items: center;
-
       color: #c8d0d9;
-
       font-size: 14px;
       font-weight: 700;
     }
@@ -124,12 +106,9 @@
 
     .hero {
       min-height: 84vh;
-
       position: relative;
-
       display: flex;
       align-items: center;
-
       overflow: hidden;
 
       background:
@@ -145,43 +124,28 @@
     .hero-content {
       position: relative;
       z-index: 2;
-
       max-width: 700px;
-
       padding: 100px 0;
     }
 
     .eyebrow {
       display: inline-block;
-
       margin-bottom: 18px;
-
       padding: 7px 13px;
-
-      border:
-        1px solid rgba(92, 180, 255, 0.55);
-
+      border: 1px solid rgba(92, 180, 255, 0.55);
       border-radius: 999px;
-
       color: #73bdff;
-
-      background:
-        rgba(20, 105, 185, 0.12);
-
+      background: rgba(20, 105, 185, 0.12);
       font-size: 12px;
       font-weight: 800;
-
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     h1 {
       font-size: clamp(46px, 8vw, 88px);
-
       line-height: 0.95;
-
       letter-spacing: -3px;
-
       margin-bottom: 24px;
     }
 
@@ -191,11 +155,8 @@
 
     .hero p {
       max-width: 620px;
-
       color: #c4ccd5;
-
       font-size: 18px;
-
       margin-bottom: 30px;
     }
 
@@ -207,33 +168,19 @@
 
     .btn {
       display: inline-flex;
-
       justify-content: center;
       align-items: center;
-
       min-height: 50px;
-
       padding: 0 22px;
-
       border-radius: 8px;
-
       font-weight: 800;
-
       transition: 0.2s ease;
     }
 
     .btn-primary {
-      background:
-        linear-gradient(
-          135deg,
-          #168cff,
-          #60b7ff
-        );
-
+      background: linear-gradient(135deg, #168cff, #60b7ff);
       color: white;
-
-      box-shadow:
-        0 10px 30px rgba(22, 140, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(22, 140, 255, 0.3);
     }
 
     .btn-primary:hover {
@@ -242,9 +189,36 @@
 
     .btn-secondary {
       border: 1px solid #718090;
+      background: rgba(255, 255, 255, 0.04);
+    }
 
-      background:
-        rgba(255, 255, 255, 0.04);
+    /* CREDIBILITY STRIP */
+
+    .trust-strip {
+      background: #07101a;
+      border-top: 1px solid rgba(85, 173, 255, 0.14);
+      border-bottom: 1px solid rgba(85, 173, 255, 0.14);
+      padding: 18px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      text-align: center;
+    }
+
+    .trust-item {
+      padding: 10px 12px;
+      color: #d8e0e8;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    .trust-item span {
+      color: #55adff;
+      margin-right: 6px;
     }
 
     section {
@@ -253,29 +227,21 @@
 
     .section-heading {
       text-align: center;
-
       max-width: 760px;
-
       margin: 0 auto 48px;
     }
 
     .section-heading span {
       color: #55adff;
-
       text-transform: uppercase;
-
       font-size: 13px;
-
       letter-spacing: 2px;
-
       font-weight: 900;
     }
 
     .section-heading h2 {
       font-size: clamp(32px, 5vw, 50px);
-
       margin: 8px 0 15px;
-
       line-height: 1.05;
     }
 
@@ -289,47 +255,86 @@
 
     .service-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
     .service-card {
       padding: 28px;
-
       border-radius: 16px;
-
       background:
         linear-gradient(
           145deg,
           rgba(30, 42, 57, 0.9),
           rgba(12, 18, 26, 0.95)
         );
-
-      border:
-        1px solid rgba(150, 175, 205, 0.15);
+      border: 1px solid rgba(150, 175, 205, 0.15);
     }
 
     .service-number {
       color: #55adff;
-
       font-size: 13px;
-
       font-weight: 900;
     }
 
     .service-card h3 {
       margin: 10px 0;
-
       font-size: 22px;
     }
 
     .service-card p {
       color: #aab5c1;
-
       font-size: 15px;
+    }
+
+    /* HOW IT WORKS */
+
+    .process {
+      background: #05080d;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .process-card {
+      padding: 28px 22px;
+      border-radius: 18px;
+      text-align: center;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(28, 40, 54, 0.9),
+          rgba(10, 16, 24, 0.96)
+        );
+      border: 1px solid rgba(120, 190, 255, 0.16);
+    }
+
+    .process-number {
+      width: 46px;
+      height: 46px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(22, 140, 255, 0.14);
+      border: 1px solid rgba(85, 173, 255, 0.4);
+      color: #64b7f5;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .process-card h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      color: #9fabb7;
+      font-size: 14px;
     }
 
     .pricing {
@@ -338,133 +343,93 @@
 
     .pricing-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
-
       align-items: stretch;
     }
 
     .price-card {
       position: relative;
-
       display: flex;
       flex-direction: column;
-
       padding: 30px;
-
       border-radius: 20px;
-
       background:
         linear-gradient(
           145deg,
           rgba(27, 38, 52, 0.92),
           rgba(10, 16, 24, 0.97)
         );
-
-      border:
-        1px solid rgba(150, 175, 205, 0.15);
+      border: 1px solid rgba(150, 175, 205, 0.15);
     }
 
     .price-card.featured {
-      border:
-        1px solid rgba(85, 173, 255, 0.55);
-
-      box-shadow:
-        0 18px 55px rgba(22, 140, 255, 0.13);
-
+      border: 1px solid rgba(85, 173, 255, 0.55);
+      box-shadow: 0 18px 55px rgba(22, 140, 255, 0.13);
       transform: translateY(-8px);
     }
 
     .popular-tag {
       display: inline-block;
-
       align-self: flex-start;
-
       margin-bottom: 13px;
-
       padding: 5px 10px;
-
       border-radius: 999px;
-
       background: #55adff;
-
       color: #04101a;
-
       font-size: 10px;
       font-weight: 900;
-
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     .price-card h3 {
       font-size: 24px;
-
       margin-bottom: 8px;
     }
 
     .price-card .price {
       color: #5db6ff;
-
       font-size: 47px;
-
       line-height: 1;
-
       font-weight: 900;
-
       margin-bottom: 16px;
     }
 
     .price-card .price small {
       font-size: 15px;
-
       color: #8996a4;
     }
 
     .price-card p {
       color: #aab5c1;
-
       font-size: 14px;
-
       margin-bottom: 20px;
     }
 
     .price-list {
       list-style: none;
-
       margin-bottom: 26px;
-
       flex-grow: 1;
     }
 
     .price-list li {
       margin-bottom: 9px;
-
       color: #d3d9df;
-
       font-size: 14px;
     }
 
     .price-list li::before {
       content: "✓";
-
       color: #55adff;
-
       font-weight: 900;
-
       margin-right: 8px;
     }
 
     .price-note {
       text-align: center;
-
       color: #8694a3;
-
       font-size: 13px;
-
       margin-top: 25px;
     }
 
@@ -478,89 +443,59 @@
 
     .before-after {
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 16px;
     }
 
     .photo-card {
       position: relative;
-
       overflow: hidden;
-
       border-radius: 16px;
-
       background: #111;
-
-      border:
-        1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .photo-card img {
       height: 600px;
-
       object-fit: cover;
     }
 
     .photo-label {
       position: absolute;
-
       top: 14px;
       left: 14px;
-
       z-index: 2;
-
       padding: 7px 13px;
-
       border-radius: 999px;
-
       font-size: 12px;
-
       font-weight: 900;
-
       letter-spacing: 1px;
-
       text-transform: uppercase;
-
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
     }
 
     .before-label {
-      background:
-        rgba(20, 25, 31, 0.84);
-
-      border:
-        1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(20, 25, 31, 0.84);
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .after-label {
-      background:
-        rgba(22, 140, 255, 0.9);
-
-      border:
-        1px solid rgba(135, 204, 255, 0.8);
+      background: rgba(22, 140, 255, 0.9);
+      border: 1px solid rgba(135, 204, 255, 0.8);
     }
 
     .gallery-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
 
     .gallery-grid img {
       height: 420px;
-
       object-fit: cover;
-
       border-radius: 14px;
-
-      border:
-        1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .resale {
@@ -575,26 +510,19 @@
 
     .resale-box {
       max-width: 850px;
-
       margin: auto;
-
       text-align: center;
     }
 
     .resale-box h2 {
-      font-size:
-        clamp(34px, 5vw, 52px);
-
+      font-size: clamp(34px, 5vw, 52px);
       margin-bottom: 18px;
     }
 
     .resale-box p {
       max-width: 720px;
-
       margin: 0 auto 28px;
-
       color: #b1bbc6;
-
       font-size: 17px;
     }
 
@@ -604,25 +532,69 @@
 
     .mobile-box {
       max-width: 850px;
-
       margin: auto;
-
       text-align: center;
     }
 
     .mobile-box h2 {
-      font-size:
-        clamp(34px, 5vw, 52px);
-
+      font-size: clamp(34px, 5vw, 52px);
       margin-bottom: 18px;
     }
 
     .mobile-box p {
       color: #b1bbc6;
-
       max-width: 700px;
-
       margin: 0 auto 28px;
+    }
+
+    /* SERVICE AREA */
+
+    .service-area {
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(22, 140, 255, 0.08),
+          transparent 55%
+        ),
+        #05080d;
+    }
+
+    .area-box {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 42px 30px;
+      border-radius: 22px;
+      border: 1px solid rgba(85, 173, 255, 0.2);
+      background: rgba(10, 18, 28, 0.88);
+    }
+
+    .area-box h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 14px;
+    }
+
+    .area-box p {
+      color: #aeb8c3;
+      max-width: 700px;
+      margin: 0 auto 24px;
+    }
+
+    .area-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .area-chip {
+      padding: 9px 14px;
+      border-radius: 999px;
+      color: #dbe7f1;
+      background: rgba(22, 140, 255, 0.09);
+      border: 1px solid rgba(85, 173, 255, 0.24);
+      font-size: 14px;
+      font-weight: 800;
     }
 
     /* FAQ */
@@ -638,35 +610,25 @@
 
     .faq-item {
       margin-bottom: 12px;
-
-      border:
-        1px solid rgba(120, 190, 255, 0.16);
-
+      border: 1px solid rgba(120, 190, 255, 0.16);
       border-radius: 14px;
-
       background:
         linear-gradient(
           145deg,
           rgba(24, 34, 47, 0.88),
           rgba(10, 16, 24, 0.96)
         );
-
       overflow: hidden;
     }
 
     .faq-item summary {
       list-style: none;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       gap: 16px;
-
       padding: 20px 22px;
-
       cursor: pointer;
-
       font-size: 17px;
       font-weight: 800;
     }
@@ -677,14 +639,10 @@
 
     .faq-item summary::after {
       content: "+";
-
       color: #55adff;
-
       font-size: 27px;
       font-weight: 400;
-
       line-height: 1;
-
       transition: transform 0.2s ease;
     }
 
@@ -694,64 +652,45 @@
 
     .faq-answer {
       padding: 0 22px 21px;
-
       color: #aeb8c3;
-
       font-size: 15px;
     }
 
     .faq-cta {
       text-align: center;
-
       margin-top: 30px;
     }
 
     .contact {
       background: #080d14;
-
       text-align: center;
     }
 
     .contact h2 {
-      font-size:
-        clamp(36px, 6vw, 58px);
-
+      font-size: clamp(36px, 6vw, 58px);
       margin-bottom: 15px;
     }
 
     .contact p {
       color: #acb7c2;
-
       margin-bottom: 28px;
     }
 
     .phone {
       display: inline-block;
-
       margin-bottom: 25px;
-
-      font-size:
-        clamp(28px, 5vw, 46px);
-
+      font-size: clamp(28px, 5vw, 46px);
       font-weight: 900;
-
       color: #5db6ff;
     }
 
     footer {
       padding: 30px 0;
-
       text-align: center;
-
       color: #718090;
-
-      border-top:
-        1px solid rgba(255,255,255,0.07);
-
+      border-top: 1px solid rgba(255,255,255,0.07);
       font-size: 13px;
     }
-
-    /* MOBILE STICKY BAR */
 
     .mobile-action-bar {
       display: none;
@@ -778,17 +717,24 @@
       }
 
       .hero-content {
-        padding:
-          190px 0 65px;
+        padding: 190px 0 65px;
       }
 
       h1 {
         letter-spacing: -2px;
       }
 
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .service-grid,
       .pricing-grid {
         grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
       .price-card.featured {
@@ -800,8 +746,7 @@
       }
 
       .gallery-grid {
-        grid-template-columns:
-          1fr 1fr;
+        grid-template-columns: 1fr 1fr;
       }
 
       .gallery-grid img {
@@ -810,28 +755,20 @@
 
       .mobile-action-bar {
         position: fixed;
-
         left: 0;
         right: 0;
         bottom: 0;
-
         z-index: 2000;
-
         display: grid;
-
         grid-template-columns: 1.4fr 1fr;
-
         gap: 9px;
 
         padding:
           10px 12px
           calc(10px + env(safe-area-inset-bottom));
 
-        background:
-          rgba(5, 8, 13, 0.96);
-
-        border-top:
-          1px solid rgba(85, 173, 255, 0.26);
+        background: rgba(5, 8, 13, 0.96);
+        border-top: 1px solid rgba(85, 173, 255, 0.26);
 
         backdrop-filter: blur(14px);
         -webkit-backdrop-filter: blur(14px);
@@ -839,41 +776,28 @@
 
       .mobile-action-bar a {
         min-height: 48px;
-
         display: flex;
-
         justify-content: center;
         align-items: center;
-
         border-radius: 10px;
-
         font-size: 14px;
         font-weight: 900;
       }
 
       .sticky-quote {
-        background:
-          linear-gradient(
-            135deg,
-            #168cff,
-            #60b7ff
-          );
-
+        background: linear-gradient(135deg, #168cff, #60b7ff);
         color: white;
       }
 
       .sticky-call {
         background: #101923;
-
         border: 1px solid #4a5969;
-
         color: #ffffff;
       }
 
       footer {
         padding-bottom: 95px;
       }
-
     }
 
     @media (max-width: 580px) {
@@ -895,13 +819,25 @@
         font-size: 10px;
       }
 
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .trust-item {
+        padding: 8px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
       .before-after {
         grid-template-columns: 1fr;
       }
 
       .photo-card img {
         height: auto;
-
         object-fit: contain;
       }
 
@@ -927,15 +863,16 @@
 
       .faq-item summary {
         padding: 18px;
-
         font-size: 16px;
       }
 
       .faq-answer {
-        padding:
-          0 18px 18px;
+        padding: 0 18px 18px;
       }
 
+      .area-box {
+        padding: 34px 20px;
+      }
     }
   </style>
 </head>
@@ -955,45 +892,19 @@
       >
 
       <div class="brand-text">
-
-        <strong>
-          Twin Turbo Detailers
-        </strong>
-
-        <span>
-          Mobile Auto Detailing
-        </span>
-
+        <strong>Twin Turbo Detailers</strong>
+        <span>Mobile Auto Detailing</span>
       </div>
 
     </a>
 
     <nav>
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="#pricing">
-        Pricing
-      </a>
-
-      <a href="#results">
-        Results
-      </a>
-
-      <a href="#gallery">
-        Gallery
-      </a>
-
-      <a href="#faq">
-        FAQ
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#results">Results</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </nav>
 
   </div>
@@ -1015,9 +926,7 @@
 
         <h1>
           Precision Shine.<br>
-          <span>
-            Every Time.
-          </span>
+          <span>Every Time.</span>
         </h1>
 
         <p>
@@ -1051,6 +960,37 @@
   </section>
 
 
+  <!-- CREDIBILITY STRIP -->
+
+  <div class="trust-strip">
+
+    <div class="container trust-grid">
+
+      <div class="trust-item">
+        <span>✓</span>
+        Mobile Service
+      </div>
+
+      <div class="trust-item">
+        <span>✓</span>
+        Upfront Estimates
+      </div>
+
+      <div class="trust-item">
+        <span>✓</span>
+        Interior Specialists
+      </div>
+
+      <div class="trust-item">
+        <span>✓</span>
+        East Idaho
+      </div>
+
+    </div>
+
+  </div>
+
+
   <section
     class="services"
     id="services"
@@ -1060,9 +1000,7 @@
 
       <div class="section-heading">
 
-        <span>
-          What We Do
-        </span>
+        <span>What We Do</span>
 
         <h2>
           Professional Interior Detailing
@@ -1128,6 +1066,105 @@
           <p>
             We bring our detailing equipment directly to you. All we need
             is access to a standard outdoor electrical outlet.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+
+  <section class="process">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>
+          Simple Process
+        </span>
+
+        <h2>
+          How It Works
+        </h2>
+
+        <p>
+          From quote to clean car, the whole process is built to be easy.
+        </p>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process-card">
+
+          <div class="process-number">
+            1
+          </div>
+
+          <h3>
+            Build Your Quote
+          </h3>
+
+          <p>
+            Choose your package, vehicle size, condition, and any add-ons.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">
+            2
+          </div>
+
+          <h3>
+            Pick A Time
+          </h3>
+
+          <p>
+            Tell us the date and time that works best for your schedule.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">
+            3
+          </div>
+
+          <h3>
+            We Confirm
+          </h3>
+
+          <p>
+            We review the request and confirm your appointment and pricing.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">
+            4
+          </div>
+
+          <h3>
+            We Come To You
+          </h3>
+
+          <p>
+            We bring the detailing setup directly to your location.
           </p>
 
         </div>
@@ -1483,6 +1520,7 @@
 
       </div>
 
+
       <div style="text-align:center; margin-top:-15px;">
 
         <a
@@ -1617,7 +1655,58 @@
   </section>
 
 
-  <!-- FAQ -->
+  <!-- SERVICE AREA -->
+
+  <section class="service-area">
+
+    <div class="container">
+
+      <div class="area-box">
+
+        <div class="eyebrow">
+          East Idaho Mobile Detailing
+        </div>
+
+        <h2>
+          We Bring The Detail To You.
+        </h2>
+
+        <p>
+          Twin Turbo Detailers serves drivers throughout the Upper Snake River
+          Valley and nearby East Idaho communities. Not sure if you're in range?
+          Send us your location and we'll let you know.
+        </p>
+
+        <div class="area-list">
+
+          <div class="area-chip">
+            Rigby
+          </div>
+
+          <div class="area-chip">
+            Idaho Falls
+          </div>
+
+          <div class="area-chip">
+            Ammon
+          </div>
+
+          <div class="area-chip">
+            Rexburg
+          </div>
+
+          <div class="area-chip">
+            Surrounding Areas
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section
     class="faq"
@@ -1797,16 +1886,11 @@
 <footer>
 
   <div class="container">
-
-    © 2026 Twin Turbo Detailers.
-    All rights reserved.
-
+    © 2026 Twin Turbo Detailers. All rights reserved.
   </div>
 
 </footer>
 
-
-<!-- MOBILE-ONLY ACTION BAR -->
 
 <div class="mobile-action-bar">
 
