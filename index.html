@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Twin Turbo Detailers provides professional mobile auto detailing and interior cleaning. We bring our equipment directly to you."
+    content="Twin Turbo Detailers provides professional mobile auto detailing and interior cleaning. Get an instant estimate and request availability."
   >
 
   <style>
@@ -44,22 +44,26 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
-
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
+
       background: rgba(5, 8, 13, 0.96);
-      border-bottom: 1px solid rgba(120, 190, 255, 0.2);
+
+      border-bottom:
+        1px solid rgba(120, 190, 255, 0.2);
+
       backdrop-filter: blur(12px);
     }
 
     .nav {
       min-height: 82px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 20px;
     }
 
@@ -72,22 +76,32 @@
     .brand-logo {
       width: 64px;
       height: 64px;
+
       object-fit: cover;
+
       border-radius: 12px;
-      border: 1px solid rgba(215, 221, 229, 0.35);
-      box-shadow: 0 0 22px rgba(22, 140, 255, 0.28);
+
+      border:
+        1px solid rgba(215, 221, 229, 0.35);
+
+      box-shadow:
+        0 0 22px rgba(22, 140, 255, 0.28);
     }
 
     .brand-text strong {
       display: block;
+
       font-size: 18px;
       letter-spacing: 0.5px;
     }
 
     .brand-text span {
       display: block;
+
       color: #9ba8b8;
+
       font-size: 12px;
+
       letter-spacing: 1.6px;
       text-transform: uppercase;
     }
@@ -96,7 +110,9 @@
       display: flex;
       gap: 22px;
       align-items: center;
+
       color: #c8d0d9;
+
       font-size: 14px;
       font-weight: 700;
     }
@@ -105,14 +121,16 @@
       color: #55adff;
     }
 
-    /* HERO */
-
     .hero {
       min-height: 84vh;
+
       position: relative;
+
       display: flex;
       align-items: center;
+
       overflow: hidden;
+
       background:
         linear-gradient(
           90deg,
@@ -126,28 +144,43 @@
     .hero-content {
       position: relative;
       z-index: 2;
+
       max-width: 700px;
+
       padding: 100px 0;
     }
 
     .eyebrow {
       display: inline-block;
+
       margin-bottom: 18px;
+
       padding: 7px 13px;
-      border: 1px solid rgba(92, 180, 255, 0.55);
+
+      border:
+        1px solid rgba(92, 180, 255, 0.55);
+
       border-radius: 999px;
+
       color: #73bdff;
-      background: rgba(20, 105, 185, 0.12);
+
+      background:
+        rgba(20, 105, 185, 0.12);
+
       font-size: 12px;
       font-weight: 800;
+
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     h1 {
       font-size: clamp(46px, 8vw, 88px);
+
       line-height: 0.95;
+
       letter-spacing: -3px;
+
       margin-bottom: 24px;
     }
 
@@ -157,8 +190,11 @@
 
     .hero p {
       max-width: 620px;
+
       color: #c4ccd5;
+
       font-size: 18px;
+
       margin-bottom: 30px;
     }
 
@@ -170,19 +206,33 @@
 
     .btn {
       display: inline-flex;
+
       justify-content: center;
       align-items: center;
+
       min-height: 50px;
+
       padding: 0 22px;
+
       border-radius: 8px;
+
       font-weight: 800;
+
       transition: 0.2s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #168cff, #60b7ff);
+      background:
+        linear-gradient(
+          135deg,
+          #168cff,
+          #60b7ff
+        );
+
       color: white;
-      box-shadow: 0 10px 30px rgba(22, 140, 255, 0.3);
+
+      box-shadow:
+        0 10px 30px rgba(22, 140, 255, 0.3);
     }
 
     .btn-primary:hover {
@@ -191,10 +241,10 @@
 
     .btn-secondary {
       border: 1px solid #718090;
-      background: rgba(255, 255, 255, 0.04);
-    }
 
-    /* GENERAL */
+      background:
+        rgba(255, 255, 255, 0.04);
+    }
 
     section {
       padding: 90px 0;
@@ -202,21 +252,29 @@
 
     .section-heading {
       text-align: center;
+
       max-width: 760px;
+
       margin: 0 auto 48px;
     }
 
     .section-heading span {
       color: #55adff;
+
       text-transform: uppercase;
+
       font-size: 13px;
+
       letter-spacing: 2px;
+
       font-weight: 900;
     }
 
     .section-heading h2 {
       font-size: clamp(32px, 5vw, 50px);
+
       margin: 8px 0 15px;
+
       line-height: 1.05;
     }
 
@@ -224,99 +282,190 @@
       color: #aeb7c2;
     }
 
-    /* SERVICES */
-
     .services {
       background: #080d14;
     }
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 18px;
     }
 
     .service-card {
       padding: 28px;
+
       border-radius: 16px;
-      background: linear-gradient(
-        145deg,
-        rgba(30, 42, 57, 0.9),
-        rgba(12, 18, 26, 0.95)
-      );
-      border: 1px solid rgba(150, 175, 205, 0.15);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(30, 42, 57, 0.9),
+          rgba(12, 18, 26, 0.95)
+        );
+
+      border:
+        1px solid rgba(150, 175, 205, 0.15);
     }
 
     .service-number {
       color: #55adff;
+
       font-size: 13px;
+
       font-weight: 900;
     }
 
     .service-card h3 {
       margin: 10px 0;
+
       font-size: 22px;
     }
 
     .service-card p {
       color: #aab5c1;
+
       font-size: 15px;
     }
 
-    /* OFFER */
-
-    .offer {
-      text-align: center;
+    .pricing {
+      background: #05080d;
     }
 
-    .offer-box {
-      max-width: 820px;
-      margin: auto;
-      padding: 42px;
-      border: 1px solid rgba(92, 180, 255, 0.28);
-      border-radius: 22px;
-      background:
-        radial-gradient(
-          circle at top,
-          rgba(31, 139, 232, 0.15),
-          transparent 55%
-        ),
-        #0a1018;
-    }
-
-    .price {
-      color: #5db6ff;
-      font-size: 62px;
-      line-height: 1;
-      font-weight: 900;
-      margin: 15px 0;
-    }
-
-    .offer-box p {
-      color: #bac3cd;
-      max-width: 650px;
-      margin: 0 auto 25px;
-    }
-
-    .offer-list {
-      list-style: none;
+    .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      max-width: 620px;
-      margin: 0 auto 30px;
-      text-align: left;
-      color: #d8dde3;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+
+      align-items: stretch;
     }
 
-    .offer-list li::before {
-      content: "✓";
-      color: #55adff;
+    .price-card {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+
+      padding: 30px;
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(27, 38, 52, 0.92),
+          rgba(10, 16, 24, 0.97)
+        );
+
+      border:
+        1px solid rgba(150, 175, 205, 0.15);
+    }
+
+    .price-card.featured {
+      border:
+        1px solid rgba(85, 173, 255, 0.55);
+
+      box-shadow:
+        0 18px 55px rgba(22, 140, 255, 0.13);
+
+      transform: translateY(-8px);
+    }
+
+    .popular-tag {
+      display: inline-block;
+
+      align-self: flex-start;
+
+      margin-bottom: 13px;
+
+      padding: 5px 10px;
+
+      border-radius: 999px;
+
+      background: #55adff;
+
+      color: #04101a;
+
+      font-size: 10px;
       font-weight: 900;
+
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .price-card h3 {
+      font-size: 24px;
+
+      margin-bottom: 8px;
+    }
+
+    .price-card .price {
+      color: #5db6ff;
+
+      font-size: 47px;
+
+      line-height: 1;
+
+      font-weight: 900;
+
+      margin-bottom: 16px;
+    }
+
+    .price-card .price small {
+      font-size: 15px;
+
+      color: #8996a4;
+    }
+
+    .price-card p {
+      color: #aab5c1;
+
+      font-size: 14px;
+
+      margin-bottom: 20px;
+    }
+
+    .price-list {
+      list-style: none;
+
+      margin-bottom: 26px;
+
+      flex-grow: 1;
+    }
+
+    .price-list li {
+      margin-bottom: 9px;
+
+      color: #d3d9df;
+
+      font-size: 14px;
+    }
+
+    .price-list li::before {
+      content: "✓";
+
+      color: #55adff;
+
+      font-weight: 900;
+
       margin-right: 8px;
     }
 
-    /* RESULTS */
+    .price-note {
+      text-align: center;
+
+      color: #8694a3;
+
+      font-size: 13px;
+
+      margin-top: 25px;
+    }
 
     .results {
       background: #080d14;
@@ -328,133 +477,206 @@
 
     .before-after {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 16px;
     }
 
     .photo-card {
       position: relative;
+
       overflow: hidden;
+
       border-radius: 16px;
+
       background: #111;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.1);
     }
 
     .photo-card img {
       height: 600px;
+
       object-fit: cover;
     }
 
     .photo-label {
       position: absolute;
+
       top: 14px;
       left: 14px;
+
       z-index: 2;
+
       padding: 7px 13px;
+
       border-radius: 999px;
+
       font-size: 12px;
+
       font-weight: 900;
+
       letter-spacing: 1px;
+
       text-transform: uppercase;
+
       backdrop-filter: blur(8px);
     }
 
     .before-label {
-      background: rgba(20, 25, 31, 0.84);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      background:
+        rgba(20, 25, 31, 0.84);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.3);
     }
 
     .after-label {
-      background: rgba(22, 140, 255, 0.9);
-      border: 1px solid rgba(135, 204, 255, 0.8);
-    }
+      background:
+        rgba(22, 140, 255, 0.9);
 
-    /* GALLERY */
+      border:
+        1px solid rgba(135, 204, 255, 0.8);
+    }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 14px;
     }
 
     .gallery-grid img {
       height: 420px;
+
       object-fit: cover;
+
       border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* MOBILE SERVICE */
-
-    .mobile {
+    .resale {
       background:
-        linear-gradient(
-          135deg,
-          rgba(22, 140, 255, 0.08),
-          transparent 50%
+        radial-gradient(
+          circle at center,
+          rgba(22, 140, 255, 0.11),
+          transparent 60%
         ),
         #05080d;
     }
 
+    .resale-box {
+      max-width: 850px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .resale-box h2 {
+      font-size:
+        clamp(34px, 5vw, 52px);
+
+      margin-bottom: 18px;
+    }
+
+    .resale-box p {
+      max-width: 720px;
+
+      margin: 0 auto 28px;
+
+      color: #b1bbc6;
+
+      font-size: 17px;
+    }
+
+    .mobile {
+      background: #080d14;
+    }
+
     .mobile-box {
       max-width: 850px;
+
       margin: auto;
+
       text-align: center;
     }
 
     .mobile-box h2 {
-      font-size: clamp(34px, 5vw, 52px);
+      font-size:
+        clamp(34px, 5vw, 52px);
+
       margin-bottom: 18px;
     }
 
     .mobile-box p {
       color: #b1bbc6;
+
       max-width: 700px;
+
       margin: 0 auto 28px;
     }
 
-    /* CONTACT */
-
     .contact {
-      background: #080d14;
+      background: #05080d;
+
       text-align: center;
     }
 
     .contact h2 {
-      font-size: clamp(36px, 6vw, 58px);
+      font-size:
+        clamp(36px, 6vw, 58px);
+
       margin-bottom: 15px;
     }
 
     .contact p {
       color: #acb7c2;
+
       margin-bottom: 28px;
     }
 
     .phone {
       display: inline-block;
+
       margin-bottom: 25px;
-      font-size: clamp(28px, 5vw, 46px);
+
+      font-size:
+        clamp(28px, 5vw, 46px);
+
       font-weight: 900;
+
       color: #5db6ff;
     }
 
     footer {
       padding: 30px 0;
+
       text-align: center;
+
       color: #718090;
-      border-top: 1px solid rgba(255,255,255,0.07);
+
+      border-top:
+        1px solid rgba(255,255,255,0.07);
+
       font-size: 13px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 850px) {
+
       nav {
         display: none;
       }
 
       .hero {
         min-height: 78vh;
+
         background:
           linear-gradient(
             180deg,
@@ -462,19 +684,26 @@
             rgba(5,8,13,.94) 74%
           ),
           url("IMG_0952.jpeg") center / cover no-repeat;
+
         align-items: flex-end;
       }
 
       .hero-content {
-        padding: 190px 0 65px;
+        padding:
+          190px 0 65px;
       }
 
       h1 {
         letter-spacing: -2px;
       }
 
-      .service-grid {
+      .service-grid,
+      .pricing-grid {
         grid-template-columns: 1fr;
+      }
+
+      .price-card.featured {
+        transform: none;
       }
 
       .photo-card img {
@@ -482,15 +711,18 @@
       }
 
       .gallery-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+          1fr 1fr;
       }
 
       .gallery-grid img {
         height: 330px;
       }
+
     }
 
     @media (max-width: 580px) {
+
       section {
         padding: 70px 0;
       }
@@ -514,6 +746,7 @@
 
       .photo-card img {
         height: auto;
+
         object-fit: contain;
       }
 
@@ -525,14 +758,6 @@
         height: auto;
       }
 
-      .offer-list {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-box {
-        padding: 30px 20px;
-      }
-
       .hero-buttons {
         flex-direction: column;
       }
@@ -540,6 +765,11 @@
       .btn {
         width: 100%;
       }
+
+      .price-card {
+        padding: 27px 22px;
+      }
+
     }
   </style>
 </head>
@@ -547,6 +777,7 @@
 <body>
 
 <header>
+
   <div class="container nav">
 
     <a href="#top" class="brand">
@@ -558,27 +789,54 @@
       >
 
       <div class="brand-text">
-        <strong>Twin Turbo Detailers</strong>
-        <span>Mobile Auto Detailing</span>
+
+        <strong>
+          Twin Turbo Detailers
+        </strong>
+
+        <span>
+          Mobile Auto Detailing
+        </span>
+
       </div>
+
     </a>
 
     <nav>
-      <a href="#services">Services</a>
-      <a href="#results">Results</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#pricing">
+        Pricing
+      </a>
+
+      <a href="#results">
+        Results
+      </a>
+
+      <a href="#gallery">
+        Gallery
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
     </nav>
 
   </div>
+
 </header>
+
 
 <main id="top">
 
-  <!-- HERO -->
-
   <section class="hero">
+
     <div class="container">
+
       <div class="hero-content">
 
         <div class="eyebrow">
@@ -587,132 +845,348 @@
 
         <h1>
           Precision Shine.<br>
-          <span>Every Time.</span>
+          <span>
+            Every Time.
+          </span>
         </h1>
 
         <p>
-          Twin Turbo Detailers brings professional interior detailing
-          directly to your driveway. Whether you're preparing your vehicle
-          for resale or simply want it looking fresh again, we'll bring it
-          back to life.
+          Professional interior detailing brought directly to your driveway.
+          Choose your service, get an estimated quote, and request an
+          appointment online.
         </p>
 
         <div class="hero-buttons">
 
-          <a href="./availability.html" class="btn btn-primary">
-            Check Availability
+          <a
+            href="./availability.html"
+            class="btn btn-primary"
+          >
+            Get Quote & Availability
           </a>
 
-          <a href="#results" class="btn btn-secondary">
+          <a
+            href="#results"
+            class="btn btn-secondary"
+          >
             See Our Results
           </a>
 
         </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- SERVICES -->
 
-  <section class="services" id="services">
+  <section
+    class="services"
+    id="services"
+  >
+
     <div class="container">
 
       <div class="section-heading">
-        <span>What We Do</span>
-        <h2>Professional Interior Detailing</h2>
+
+        <span>
+          What We Do
+        </span>
+
+        <h2>
+          Professional Interior Detailing
+        </h2>
 
         <p>
-          Designed to make your vehicle cleaner, sharper, and ready to impress.
+          Whether your vehicle needs a quick refresh or a serious interior
+          reset, we make the process simple.
         </p>
+
       </div>
+
 
       <div class="service-grid">
 
         <div class="service-card">
-          <div class="service-number">01</div>
 
-          <h3>Interior Reset</h3>
+          <div class="service-number">
+            01
+          </div>
+
+          <h3>
+            Interior Detailing
+          </h3>
 
           <p>
-            Deep cleaning of seats, carpets, floor mats, dash, center console,
-            doors, cup holders, and interior surfaces.
+            Seats, carpets, floor mats, dash, center console, door panels,
+            cup holders, interior surfaces, and more.
           </p>
+
         </div>
 
-        <div class="service-card">
-          <div class="service-number">02</div>
 
-          <h3>Resale Preparation</h3>
+        <div class="service-card">
+
+          <div class="service-number">
+            02
+          </div>
+
+          <h3>
+            Resale Preparation
+          </h3>
 
           <p>
-            Preparing your vehicle for Marketplace or private-sale buyers so
-            it presents clean, cared-for, and ready to sell.
+            Get your vehicle ready for Marketplace or private-sale buyers
+            with a cleaner, sharper interior that presents well in photos
+            and in person.
           </p>
+
         </div>
 
-        <div class="service-card">
-          <div class="service-number">03</div>
 
-          <h3>Mobile Service</h3>
+        <div class="service-card">
+
+          <div class="service-number">
+            03
+          </div>
+
+          <h3>
+            Mobile Service
+          </h3>
 
           <p>
-            We bring our detailing equipment directly to you. All we need is
-            access to a standard outdoor power outlet.
+            We bring our detailing equipment directly to you. All we need
+            is access to a standard outdoor electrical outlet.
           </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
-  <!-- OFFER -->
 
-  <section class="offer">
-    <div class="container">
+  <section
+    class="pricing"
+    id="pricing"
+  >
 
-      <div class="offer-box">
-
-        <div class="eyebrow">
-          Complete Interior Reset
-        </div>
-
-        <div class="price">
-          $150
-        </div>
-
-        <p>
-          A flat-rate interior detailing service built for drivers who want
-          their vehicle looking dramatically cleaner without the dealership
-          price tag.
-        </p>
-
-        <ul class="offer-list">
-          <li>Dash & console cleaning</li>
-          <li>Seat cleaning</li>
-          <li>Carpet cleaning</li>
-          <li>Floor mat cleaning</li>
-          <li>Door panels</li>
-          <li>Trunk / cargo area</li>
-        </ul>
-
-        <a href="./availability.html" class="btn btn-primary">
-          Book Your Detail
-        </a>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BEFORE AND AFTER -->
-
-  <section class="results" id="results">
     <div class="container">
 
       <div class="section-heading">
-        <span>Real Results</span>
+
+        <span>
+          Simple Pricing
+        </span>
+
+        <h2>
+          Choose The Detail Your Vehicle Needs
+        </h2>
+
+        <p>
+          Start with a package below, then build your exact estimate based
+          on vehicle size, condition, and optional add-ons.
+        </p>
+
+      </div>
+
+
+      <div class="pricing-grid">
+
+        <div class="price-card">
+
+          <h3>
+            Interior Refresh
+          </h3>
+
+          <div class="price">
+            $100
+            <small>
+              starting at
+            </small>
+          </div>
+
+          <p>
+            Ideal for maintained vehicles that need a professional cleanup.
+          </p>
+
+          <ul class="price-list">
+
+            <li>
+              Full interior vacuum
+            </li>
+
+            <li>
+              Dash & console cleaning
+            </li>
+
+            <li>
+              Door panel cleaning
+            </li>
+
+            <li>
+              Floor mats
+            </li>
+
+            <li>
+              Interior wipe-down
+            </li>
+
+          </ul>
+
+          <a
+            href="./availability.html"
+            class="btn btn-secondary"
+          >
+            Build My Quote
+          </a>
+
+        </div>
+
+
+        <div class="price-card featured">
+
+          <div class="popular-tag">
+            Most Popular
+          </div>
+
+          <h3>
+            Full Interior Detail
+          </h3>
+
+          <div class="price">
+            $150
+            <small>
+              starting at
+            </small>
+          </div>
+
+          <p>
+            A complete interior reset for daily drivers, resale preparation,
+            or vehicles that need a deeper clean.
+          </p>
+
+          <ul class="price-list">
+
+            <li>
+              Deep vacuum
+            </li>
+
+            <li>
+              Seat cleaning
+            </li>
+
+            <li>
+              Carpet cleaning
+            </li>
+
+            <li>
+              Dash & console
+            </li>
+
+            <li>
+              Floor mats
+            </li>
+
+            <li>
+              Door panels
+            </li>
+
+            <li>
+              Trunk / cargo area
+            </li>
+
+          </ul>
+
+          <a
+            href="./availability.html"
+            class="btn btn-primary"
+          >
+            Get My Estimate
+          </a>
+
+        </div>
+
+
+        <div class="price-card">
+
+          <h3>
+            Interior Restoration
+          </h3>
+
+          <div class="price">
+            $200
+            <small>
+              starting at
+            </small>
+          </div>
+
+          <p>
+            For heavily used interiors needing additional time and deeper
+            cleaning.
+          </p>
+
+          <ul class="price-list">
+
+            <li>
+              Deep interior cleaning
+            </li>
+
+            <li>
+              Heavy soil treatment
+            </li>
+
+            <li>
+              Detailed crevice cleaning
+            </li>
+
+            <li>
+              Carpet & seat attention
+            </li>
+
+            <li>
+              Interior reset
+            </li>
+
+          </ul>
+
+          <a
+            href="./availability.html"
+            class="btn btn-secondary"
+          >
+            Build My Quote
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="price-note">
+        Prices shown are starting prices. Final pricing depends on vehicle
+        size, condition, and selected services.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section
+    class="results"
+    id="results"
+  >
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>
+          Real Results
+        </span>
 
         <h2>
           Before & After
@@ -721,9 +1195,12 @@
         <p>
           See the difference a proper interior detail can make.
         </p>
+
       </div>
 
+
       <div class="comparison">
+
         <div class="before-after">
 
           <div class="photo-card">
@@ -740,6 +1217,7 @@
 
           </div>
 
+
           <div class="photo-card">
 
             <div class="photo-label after-label">
@@ -755,9 +1233,12 @@
           </div>
 
         </div>
+
       </div>
 
+
       <div class="comparison">
+
         <div class="before-after">
 
           <div class="photo-card">
@@ -774,6 +1255,7 @@
 
           </div>
 
+
           <div class="photo-card">
 
             <div class="photo-label after-label">
@@ -789,9 +1271,12 @@
           </div>
 
         </div>
+
       </div>
 
+
       <div class="comparison">
+
         <div class="before-after">
 
           <div class="photo-card">
@@ -808,6 +1293,7 @@
 
           </div>
 
+
           <div class="photo-card">
 
             <div class="photo-label after-label">
@@ -823,18 +1309,23 @@
           </div>
 
         </div>
+
       </div>
 
     </div>
+
   </section>
 
-  <!-- GALLERY -->
 
   <section id="gallery">
+
     <div class="container">
 
       <div class="section-heading">
-        <span>Finished Work</span>
+
+        <span>
+          Finished Work
+        </span>
 
         <h2>
           Showroom-Ready Interior
@@ -843,7 +1334,9 @@
         <p>
           More angles from the finished detail.
         </p>
+
       </div>
+
 
       <div class="gallery-grid">
 
@@ -868,11 +1361,47 @@
       </div>
 
     </div>
+
   </section>
 
-  <!-- MOBILE SERVICE -->
+
+  <section class="resale">
+
+    <div class="container">
+
+      <div class="resale-box">
+
+        <div class="eyebrow">
+          Selling Your Vehicle?
+        </div>
+
+        <h2>
+          Make The First Impression Count.
+        </h2>
+
+        <p>
+          Buyers often see your interior before they ever meet you.
+          A professionally cleaned vehicle presents better in listing photos,
+          feels better during viewings, and helps show buyers that the vehicle
+          has been cared for.
+        </p>
+
+        <a
+          href="./availability.html"
+          class="btn btn-primary"
+        >
+          Prepare My Vehicle For Sale
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="mobile">
+
     <div class="container">
 
       <div class="mobile-box">
@@ -886,35 +1415,44 @@
         </h2>
 
         <p>
-          Twin Turbo Detailers operates as a mobile setup. We bring our own
-          specialized detailing equipment directly to your location. All we
-          need from you is access to a standard outdoor electrical outlet.
+          Twin Turbo Detailers operates as a mobile setup. We bring our
+          specialized detailing equipment directly to your location.
+          All we need from you is access to a standard outdoor electrical
+          outlet.
         </p>
 
-        <a href="./availability.html" class="btn btn-primary">
-          Check Availability
+        <a
+          href="./availability.html"
+          class="btn btn-primary"
+        >
+          Get Quote & Availability
         </a>
 
       </div>
 
     </div>
+
   </section>
 
-  <!-- CONTACT -->
 
-  <section class="contact" id="contact">
+  <section
+    class="contact"
+    id="contact"
+  >
+
     <div class="container">
 
       <div class="eyebrow">
-        Book Your Detail
+        Ready To Book?
       </div>
 
       <h2>
-        Bring Your Vehicle Back to Life.
+        Bring Your Vehicle Back To Life.
       </h2>
 
       <p>
-        Call or text Twin Turbo Detailers to ask about available appointments.
+        Build your estimate online or call or text Twin Turbo Detailers
+        directly.
       </p>
 
       <a
@@ -927,21 +1465,28 @@
       <br>
 
       <a
-        href="sms:9862089586"
+        href="./availability.html"
         class="btn btn-primary"
       >
-        Text Twin Turbo Detailers
+        Get Quote & Availability
       </a>
 
     </div>
+
   </section>
 
 </main>
 
+
 <footer>
+
   <div class="container">
-    © 2026 Twin Turbo Detailers. All rights reserved.
+
+    © 2026 Twin Turbo Detailers.
+    All rights reserved.
+
   </div>
+
 </footer>
 
 </body>
