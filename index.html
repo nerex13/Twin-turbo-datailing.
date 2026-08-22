@@ -1,0 +1,1259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>BUSINESS NAME | Local Service Experts</title>
+
+  <meta
+    name="description"
+    content="BUSINESS NAME provides reliable SERVICE TYPE in CITY, STATE and surrounding areas. Get a free estimate today."
+  />
+
+  <style>
+    :root {
+      --primary: #5b2be0;
+      --primary-dark: #3e16ad;
+      --accent: #9b7cff;
+      --dark: #111827;
+      --text: #374151;
+      --light: #f7f7fb;
+      --white: #ffffff;
+      --border: #e5e7eb;
+      --success: #16a34a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1150px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--dark);
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+
+    .muted {
+      color: #6b7280;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 12px;
+      font-weight: 800;
+      transition: 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--dark);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: #f3f4f6;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--dark);
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 90px 0 80px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(91,43,224,0.13), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #faf9ff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-copy p {
+      max-width: 650px;
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .trust-row span::before {
+      content: "✓";
+      color: var(--success);
+      margin-right: 6px;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 26px;
+      padding: 12px;
+      box-shadow: 0 30px 70px rgba(17,24,39,0.12);
+      border: 1px solid var(--border);
+    }
+
+    .hero-image {
+      min-height: 460px;
+      border-radius: 18px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(17,24,39,0.15), rgba(17,24,39,0.15)),
+        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85");
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* STATS */
+
+    .stats {
+      margin-top: -30px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .stats-grid {
+      background: var(--dark);
+      color: white;
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 28px;
+      gap: 20px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      color: white;
+    }
+
+    .stat span {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    /* SERVICES */
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 42px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      background: white;
+      transition: 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(17,24,39,0.08);
+      border-color: rgba(91,43,224,0.25);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(91,43,224,0.1);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 460px;
+      border-radius: 24px;
+      background:
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=85");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .check-list {
+      margin: 26px 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .check-list div {
+      font-weight: 700;
+    }
+
+    .check-list div::before {
+      content: "✓";
+      color: var(--primary);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .process-card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .step {
+      display: inline-grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    /* REVIEWS */
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review {
+      padding: 28px;
+      border-radius: 18px;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .stars {
+      color: #f59e0b;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .review-name {
+      margin-top: 16px;
+      font-weight: 900;
+      color: var(--dark);
+    }
+
+    /* CTA */
+
+    .cta {
+      background:
+        linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      border-radius: 26px;
+      padding: 54px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .cta h2,
+    .cta p {
+      color: white;
+    }
+
+    .cta p {
+      opacity: 0.9;
+      margin-top: 8px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 22px;
+    }
+
+    .contact-box {
+      padding: 20px;
+      border-radius: 16px;
+      background: var(--light);
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(91,43,224,0.10);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 70px;
+      background: var(--dark);
+      color: #d1d5db;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 35px;
+    }
+
+    footer h3 {
+      color: white;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .copyright {
+      border-top: 1px solid #374151;
+      padding-top: 22px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .reviews-grid,
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image,
+      .about-image {
+        min-height: 350px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .services-grid,
+      .reviews-grid,
+      .process-grid,
+      .stats-grid,
+      .form-row,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta {
+        padding: 34px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      BUSINESS<span>NAME</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="btn btn-primary" href="tel:2085551234">
+      Call Now
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+
+        <div class="eyebrow">
+          Serving CITY, STATE & Surrounding Areas
+        </div>
+
+        <h1>
+          Quality Work.<br>
+          Clean Results.
+        </h1>
+
+        <p>
+          BUSINESS NAME provides professional SERVICE TYPE
+          for homeowners and businesses throughout CITY and
+          the surrounding area.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#contact" class="btn btn-primary">
+            Get a Free Estimate
+          </a>
+
+          <a href="tel:2085551234" class="btn btn-secondary">
+            Call (208) 555-1234
+          </a>
+
+        </div>
+
+        <div class="trust-row">
+          <span>Free Estimates</span>
+          <span>Locally Owned</span>
+          <span>Reliable Service</span>
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+        <div class="hero-image"></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- STATS -->
+
+  <div class="container stats">
+
+    <div class="stats-grid">
+
+      <div class="stat">
+        <strong>100+</strong>
+        <span>Projects Completed</span>
+      </div>
+
+      <div class="stat">
+        <strong>5★</strong>
+        <span>Customer Service</span>
+      </div>
+
+      <div class="stat">
+        <strong>Fast</strong>
+        <span>Free Estimates</span>
+      </div>
+
+      <div class="stat">
+        <strong>Local</strong>
+        <span>Owned & Operated</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SERVICES -->
+
+  <section id="services" class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">Our Services</div>
+
+        <h2>
+          Everything you need in one place.
+        </h2>
+
+        <p class="muted">
+          Replace these services with whatever the business actually offers.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid">
+
+        <div class="service-card">
+
+          <div class="service-icon">01</div>
+
+          <h3>Service One</h3>
+
+          <p>
+            Short description explaining the service and why
+            customers should choose this business.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">02</div>
+
+          <h3>Service Two</h3>
+
+          <p>
+            Professional service designed to improve, repair,
+            clean, maintain, or protect your property.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">03</div>
+
+          <h3>Service Three</h3>
+
+          <p>
+            Reliable work with clear communication and straightforward
+            estimates.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">04</div>
+
+          <h3>Service Four</h3>
+
+          <p>
+            Add additional specialty work the business wants customers
+            to know about.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">05</div>
+
+          <h3>Service Five</h3>
+
+          <p>
+            Great for commercial, residential, recurring, or seasonal
+            services.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">06</div>
+
+          <h3>Custom Projects</h3>
+
+          <p>
+            Have something different in mind? Contact us and we'll
+            let you know how we can help.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about" class="section section-light">
+
+    <div class="container about-grid">
+
+      <div class="about-image"></div>
+
+      <div>
+
+        <div class="eyebrow">
+          Why Choose Us
+        </div>
+
+        <h2>
+          Local service without the corporate runaround.
+        </h2>
+
+        <p>
+          BUSINESS NAME is committed to dependable service,
+          honest communication, and quality workmanship.
+          We treat every property like our reputation depends on it,
+          because it does.
+        </p>
+
+        <div class="check-list">
+
+          <div>Clear and honest estimates</div>
+
+          <div>Fast communication</div>
+
+          <div>Professional results</div>
+
+          <div>Residential and commercial service</div>
+
+          <div>Locally owned and operated</div>
+
+        </div>
+
+        <a href="#contact" class="btn btn-primary">
+          Request an Estimate
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PROCESS -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          How It Works
+        </div>
+
+        <h2>
+          Simple from start to finish.
+        </h2>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process-card">
+
+          <div class="step">1</div>
+
+          <h3>Request an Estimate</h3>
+
+          <p>
+            Call, text, or submit the form and tell us what
+            you need done.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="step">2</div>
+
+          <h3>Get Your Quote</h3>
+
+          <p>
+            We'll review the project and provide straightforward
+            pricing.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="step">3</div>
+
+          <h3>We Get It Done</h3>
+
+          <p>
+            Choose a convenient time and we'll take care of the work.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- REVIEWS -->
+
+  <section id="reviews" class="section section-light">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Customer Reviews
+        </div>
+
+        <h2>
+          Built on good work and good word of mouth.
+        </h2>
+
+      </div>
+
+
+      <div class="reviews-grid">
+
+        <div class="review">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "Great communication and excellent work.
+            Everything turned out better than expected."
+          </p>
+
+          <div class="review-name">
+            Customer Name
+          </div>
+
+        </div>
+
+
+        <div class="review">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "Showed up when they said they would and did
+            an awesome job. Highly recommend."
+          </p>
+
+          <div class="review-name">
+            Customer Name
+          </div>
+
+        </div>
+
+
+        <div class="review">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "Easy estimate, fair pricing, and the finished
+            work looked great."
+          </p>
+
+          <div class="review-name">
+            Customer Name
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta">
+
+        <div>
+
+          <h2>
+            Ready to get your project started?
+          </h2>
+
+          <p>
+            Contact BUSINESS NAME today for a free estimate.
+          </p>
+
+        </div>
+
+        <a href="#contact" class="btn btn-secondary">
+          Get My Estimate
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="section">
+
+    <div class="container contact-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          Contact Us
+        </div>
+
+        <h2>
+          Get a free estimate.
+        </h2>
+
+        <p class="muted">
+          Tell us a little about your project and we'll get back
+          to you as soon as possible.
+        </p>
+
+        <div class="contact-info">
+
+          <div class="contact-box">
+
+            <h3>Phone</h3>
+
+            <a href="tel:2085551234">
+              (208) 555-1234
+            </a>
+
+          </div>
+
+
+          <div class="contact-box">
+
+            <h3>Email</h3>
+
+            <a href="mailto:hello@business.com">
+              hello@business.com
+            </a>
+
+          </div>
+
+
+          <div class="contact-box">
+
+            <h3>Service Area</h3>
+
+            <p>
+              CITY, STATE and surrounding communities
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!--
+      Replace YOUR_FORM_ID below with a Formspree form ID,
+      or connect this form to another form provider.
+      -->
+
+      <form
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+      >
+
+        <div class="form-row">
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone number"
+            required
+          />
+
+        </div>
+
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address"
+        />
+
+
+        <select name="service" required>
+
+          <option value="">
+            Select a service
+          </option>
+
+          <option>
+            Service One
+          </option>
+
+          <option>
+            Service Two
+          </option>
+
+          <option>
+            Service Three
+          </option>
+
+          <option>
+            Other
+          </option>
+
+        </select>
+
+
+        <textarea
+          name="message"
+          placeholder="Tell us about your project..."
+          required
+        ></textarea>
+
+
+        <button
+          class="btn btn-primary"
+          type="submit"
+        >
+          Request Free Estimate
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>
+          BUSINESS NAME
+        </h3>
+
+        <p>
+          Professional SERVICE TYPE serving CITY, STATE
+          and surrounding areas.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Services
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="#services">
+            Service One
+          </a>
+
+          <a href="#services">
+            Service Two
+          </a>
+
+          <a href="#services">
+            Service Three
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="tel:2085551234">
+            (208) 555-1234
+          </a>
+
+          <a href="mailto:hello@business.com">
+            hello@business.com
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © <span id="year"></span> BUSINESS NAME.
+      All rights reserved.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
