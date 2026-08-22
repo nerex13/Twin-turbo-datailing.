@@ -74,8 +74,6 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
-
     header {
       position: sticky;
       top: 0;
@@ -127,8 +125,6 @@
       font-weight: 800;
     }
 
-    /* HERO */
-
     .hero {
       padding: 80px 0 48px;
       text-align: center;
@@ -173,8 +169,6 @@
       font-size: 17px;
     }
 
-    /* QUOTES */
-
     .quotes {
       padding: 10px 0 45px;
     }
@@ -195,8 +189,6 @@
       font-weight: 700;
       backdrop-filter: blur(8px);
     }
-
-    /* FORM */
 
     .form-section {
       padding: 0 0 90px;
@@ -325,8 +317,6 @@
       color: #dce3ea;
     }
 
-    /* CONTACT */
-
     .contact {
       text-align: center;
       padding-bottom: 75px;
@@ -416,7 +406,7 @@
 <header>
   <div class="container nav">
 
-    <a href="index.html" class="brand">
+    <a href="./index.html" class="brand">
 
       <img
         src="IMG_0982.png"
@@ -431,7 +421,7 @@
 
     </a>
 
-    <a href="index.html" class="back-link">
+    <a href="./index.html" class="back-link">
       ← Back to Home
     </a>
 
@@ -496,19 +486,13 @@
 
       <div class="form-card">
 
-        <h2>
-          Request an Appointment
-        </h2>
+        <h2>Request an Appointment</h2>
 
         <p class="form-intro">
           Complete the form below and we'll get back to you to confirm your slot.
         </p>
 
-        <form
-          action="mailto:9862089586"
-          method="post"
-          enctype="text/plain"
-        >
+        <form id="availabilityForm">
 
           <div class="form-grid">
 
@@ -517,7 +501,6 @@
               <input
                 type="text"
                 id="name"
-                name="Name"
                 placeholder="Full name"
                 required
               >
@@ -528,7 +511,6 @@
               <input
                 type="tel"
                 id="phone"
-                name="Phone"
                 placeholder="(000) 000-0000"
                 required
               >
@@ -539,7 +521,6 @@
               <input
                 type="text"
                 id="vehicle"
-                name="Vehicle"
                 placeholder="Example: 2018 Ford F-150"
                 required
               >
@@ -548,11 +529,7 @@
             <div class="field">
               <label for="service">Service</label>
 
-              <select
-                id="service"
-                name="Service"
-                required
-              >
+              <select id="service" required>
                 <option value="">Select a service</option>
                 <option>Complete Interior Reset - $150</option>
                 <option>Resale Preparation</option>
@@ -566,7 +543,6 @@
               <input
                 type="date"
                 id="date"
-                name="Preferred Date"
                 required
               >
             </div>
@@ -574,11 +550,7 @@
             <div class="field">
               <label for="time">Preferred Time</label>
 
-              <select
-                id="time"
-                name="Preferred Time"
-                required
-              >
+              <select id="time" required>
                 <option value="">Select a time</option>
                 <option>Morning</option>
                 <option>Afternoon</option>
@@ -593,18 +565,18 @@
               <input
                 type="text"
                 id="location"
-                name="Service Location"
                 placeholder="City or address where the vehicle will be"
                 required
               >
             </div>
 
             <div class="field full">
-              <label for="details">Vehicle Condition / Additional Details</label>
+              <label for="details">
+                Vehicle Condition / Additional Details
+              </label>
 
               <textarea
                 id="details"
-                name="Details"
                 placeholder="Tell us anything we should know about the vehicle, stains, pet hair, heavy dirt, etc."
               ></textarea>
             </div>
@@ -673,6 +645,42 @@
     © 2026 Twin Turbo Detailers. Precision Shine. Every Time.
   </div>
 </footer>
+
+<script>
+  const availabilityForm = document.getElementById("availabilityForm");
+
+  availabilityForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const vehicle = document.getElementById("vehicle").value.trim();
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const location = document.getElementById("location").value.trim();
+    const details = document.getElementById("details").value.trim();
+
+    const message =
+`Twin Turbo Detailers Availability Request
+
+Name: ${name}
+Phone: ${phone}
+Vehicle: ${vehicle}
+Service: ${service}
+Preferred Date: ${date}
+Preferred Time: ${time}
+Location: ${location}
+
+Vehicle Condition / Details:
+${details || "None provided"}`;
+
+    const smsLink =
+      "sms:9862089586?body=" + encodeURIComponent(message);
+
+    window.location.href = smsLink;
+  });
+</script>
 
 </body>
 </html>
