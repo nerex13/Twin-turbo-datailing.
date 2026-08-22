@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Check Availability | Twin Turbo Detailers</title>
+  <title>Availability & Quote | Twin Turbo Detailers</title>
 
   <meta
     name="description"
-    content="Check availability for Twin Turbo Detailers mobile auto detailing."
+    content="Get an estimated quote and request availability for Twin Turbo Detailers mobile auto detailing."
   >
 
   <style>
@@ -32,7 +32,6 @@
       overflow-x: hidden;
     }
 
-    /* FAINT LOGO IN BACKGROUND */
     body::before {
       content: "";
       position: fixed;
@@ -41,8 +40,8 @@
 
       background:
         linear-gradient(
-          rgba(5, 8, 13, 0.91),
-          rgba(5, 8, 13, 0.96)
+          rgba(5, 8, 13, 0.92),
+          rgba(5, 8, 13, 0.97)
         ),
         url("IMG_0982.png");
 
@@ -52,7 +51,6 @@
       pointer-events: none;
     }
 
-    /* SUBTLE BLUE GLOW */
     body::after {
       content: "";
       position: fixed;
@@ -78,7 +76,6 @@
       text-decoration: none;
     }
 
-    /* BACKGROUND QUOTES */
     .quote-bg {
       position: fixed;
       inset: 0;
@@ -89,30 +86,23 @@
 
     .quote-bg span {
       position: absolute;
-      color: rgba(255, 255, 255, 0.025);
+      color: rgba(255, 255, 255, 0.022);
       font-size: clamp(18px, 4vw, 34px);
       font-weight: 800;
-      letter-spacing: 1px;
       white-space: nowrap;
       transform: rotate(-11deg);
     }
 
     .quote-bg span:nth-child(1) {
-      top: 24%;
+      top: 28%;
       left: -4%;
     }
 
     .quote-bg span:nth-child(2) {
-      top: 61%;
+      top: 75%;
       right: -8%;
     }
 
-    .quote-bg span:nth-child(3) {
-      top: 86%;
-      left: 1%;
-    }
-
-    /* HEADER */
     header {
       width: 100%;
       background: rgba(5, 9, 15, 0.94);
@@ -132,7 +122,6 @@
       gap: 24px;
     }
 
-    /* TOP LEFT LOGO */
     .brand {
       display: flex;
       align-items: center;
@@ -154,7 +143,6 @@
       font-size: 26px;
       line-height: 1.1;
       margin-bottom: 6px;
-      letter-spacing: -0.4px;
     }
 
     .brand-text p {
@@ -171,9 +159,8 @@
       white-space: nowrap;
     }
 
-    /* MAIN */
     main {
-      width: min(760px, calc(100% - 30px));
+      width: min(860px, calc(100% - 30px));
       margin: 34px auto 70px;
     }
 
@@ -182,22 +169,63 @@
       margin-bottom: 28px;
     }
 
+    .intro-badge {
+      display: inline-block;
+      margin-bottom: 13px;
+      padding: 7px 13px;
+      border-radius: 999px;
+
+      color: #72c1fa;
+      border: 1px solid rgba(82, 176, 243, 0.42);
+      background: rgba(58, 147, 214, 0.08);
+
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
     .intro h2 {
-      font-size: clamp(30px, 6vw, 45px);
-      margin-bottom: 8px;
-      letter-spacing: -1px;
+      font-size: clamp(34px, 7vw, 52px);
+      margin-bottom: 10px;
+      letter-spacing: -1.5px;
     }
 
     .intro p {
       color: #b7c0cb;
-      max-width: 620px;
+      max-width: 650px;
       margin: 0 auto;
       font-size: 17px;
     }
 
-    /* FORM CARD */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .benefit {
+      background: rgba(10, 20, 31, 0.82);
+      border: 1px solid rgba(63, 157, 221, 0.22);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .benefit strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    .benefit span {
+      color: #9eabb8;
+      font-size: 13px;
+    }
+
     .form-card {
-      background: rgba(10, 20, 31, 0.91);
+      background: rgba(10, 20, 31, 0.93);
       border: 1px solid rgba(63, 157, 221, 0.32);
       border-radius: 24px;
       padding: 34px;
@@ -210,17 +238,47 @@
       -webkit-backdrop-filter: blur(11px);
     }
 
+    .form-section {
+      margin-bottom: 34px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .form-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .form-section-title {
+      margin-bottom: 20px;
+    }
+
+    .form-section-title h3 {
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+
+    .form-section-title p {
+      color: #8f9aa7;
+      font-size: 14px;
+    }
+
     .form-group {
-      margin-bottom: 27px;
+      margin-bottom: 24px;
       width: 100%;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
 
     label {
       display: block;
       color: #e0e6ed;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
-      margin-bottom: 11px;
+      margin-bottom: 9px;
     }
 
     input,
@@ -234,29 +292,24 @@
       color: #ffffff;
 
       border: 1px solid #344252;
-      border-radius: 16px;
+      border-radius: 14px;
 
-      padding: 17px 18px;
+      padding: 16px 17px;
 
       font-family: inherit;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.4;
 
       outline: none;
     }
 
-    input {
-      min-height: 62px;
-    }
-
+    input,
     select {
-      min-height: 62px;
-      appearance: auto;
-      -webkit-appearance: menulist;
+      min-height: 60px;
     }
 
     textarea {
-      min-height: 135px;
+      min-height: 120px;
       resize: vertical;
     }
 
@@ -273,23 +326,21 @@
       color: #707b88;
     }
 
-    /* DATE ALIGNMENT FIX */
     input[type="date"] {
       width: 100%;
       min-width: 0;
-      max-width: 100%;
-      height: 62px;
+      height: 60px;
 
-      padding: 17px 18px;
+      padding: 16px 17px;
 
       background: #0a131e;
       color: #ffffff;
 
       border: 1px solid #344252;
-      border-radius: 16px;
+      border-radius: 14px;
 
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
+      font-size: 17px;
 
       text-align: left;
 
@@ -317,14 +368,186 @@
       opacity: 0.85;
     }
 
-    /* BUTTON */
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .package-option {
+      position: relative;
+    }
+
+    .package-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .package-card {
+      height: 100%;
+      padding: 20px 16px;
+
+      background: #0a131e;
+      border: 1px solid #344252;
+      border-radius: 16px;
+
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .package-card:hover {
+      border-color: #55adff;
+    }
+
+    .package-option input:checked + .package-card {
+      border-color: #61b8f6;
+      background: rgba(31, 116, 181, 0.16);
+      box-shadow: 0 0 0 2px rgba(85, 173, 255, 0.10);
+    }
+
+    .package-name {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .package-price {
+      color: #61b8f6;
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .package-card p {
+      color: #96a2ae;
+      font-size: 13px;
+    }
+
+    .popular {
+      display: inline-block;
+      margin-bottom: 9px;
+
+      padding: 4px 8px;
+
+      color: #07121b;
+      background: #61b8f6;
+      border-radius: 999px;
+
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .addons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .addon {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+
+      padding: 14px;
+
+      background: #0a131e;
+      border: 1px solid #344252;
+      border-radius: 14px;
+
+      cursor: pointer;
+    }
+
+    .addon input {
+      width: 20px;
+      height: 20px;
+      min-height: auto;
+      flex-shrink: 0;
+      accent-color: #55adff;
+    }
+
+    .addon-text {
+      flex: 1;
+    }
+
+    .addon-text strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .addon-text span {
+      color: #82909e;
+      font-size: 12px;
+    }
+
+    .estimate-box {
+      margin: 10px 0 30px;
+      padding: 26px;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(48, 154, 230, 0.15),
+          transparent 60%
+        ),
+        #07111b;
+
+      border: 1px solid rgba(85, 173, 255, 0.35);
+      border-radius: 18px;
+    }
+
+    .estimate-label {
+      color: #9ba8b5;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+
+    .estimate-price {
+      color: #65bdf7;
+      font-size: clamp(42px, 8vw, 62px);
+      line-height: 1.1;
+      font-weight: 900;
+      margin: 7px 0;
+    }
+
+    .estimate-note {
+      color: #8d9aa8;
+      font-size: 13px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .resale-note {
+      margin-bottom: 28px;
+      padding: 20px;
+
+      background: rgba(22, 140, 255, 0.08);
+      border-left: 3px solid #55adff;
+      border-radius: 10px;
+    }
+
+    .resale-note strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .resale-note p {
+      color: #aeb8c3;
+      font-size: 14px;
+    }
+
     .submit-btn {
       width: 100%;
       border: none;
       border-radius: 16px;
 
       padding: 18px 22px;
-      margin-top: 10px;
 
       background: linear-gradient(
         135deg,
@@ -334,11 +557,16 @@
 
       color: #04101a;
       font-size: 19px;
-      font-weight: 800;
+      font-weight: 900;
       cursor: pointer;
+
+      box-shadow: 0 12px 30px rgba(49, 145, 214, 0.2);
     }
 
-    /* CONTACT */
+    .submit-btn:hover {
+      transform: translateY(-1px);
+    }
+
     .contact-note {
       text-align: center;
       color: #9eabb8;
@@ -351,17 +579,14 @@
       font-weight: 700;
     }
 
-    /* MOBILE */
-    @media (max-width: 700px) {
+    @media (max-width: 750px) {
       body::before {
         background-size: 300px;
-        background-position: center 38%;
       }
 
       .header-inner {
         width: calc(100% - 24px);
         min-height: 116px;
-        gap: 10px;
       }
 
       .brand {
@@ -392,16 +617,25 @@
         margin-top: 26px;
       }
 
-      .form-card {
-        padding: 27px 22px;
-        border-radius: 20px;
+      .benefits {
+        grid-template-columns: 1fr;
       }
 
-      input,
-      select,
-      textarea,
-      input[type="date"] {
-        font-size: 17px;
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .addons {
+        grid-template-columns: 1fr;
+      }
+
+      .form-card {
+        padding: 27px 22px;
       }
     }
 
@@ -438,7 +672,6 @@
 
   <div class="quote-bg">
     <span>Precision Shine. Every Time.</span>
-    <span>Where Clean Meets Perfection.</span>
     <span>Bringing Your Vehicle Back to Life.</span>
   </div>
 
@@ -470,152 +703,428 @@
   <main>
 
     <section class="intro">
-      <h2>Check Availability</h2>
+
+      <div class="intro-badge">
+        Fast Estimate
+      </div>
+
+      <h2>
+        Availability & Quote
+      </h2>
 
       <p>
-        Tell us about your vehicle and what time works best.
-        We’ll contact you to confirm your appointment.
+        Build your detail below for an estimated starting price,
+        then request a time that works for you.
       </p>
+
+    </section>
+
+    <section class="benefits">
+
+      <div class="benefit">
+        <strong>We Come To You</strong>
+        <span>Mobile service at your location.</span>
+      </div>
+
+      <div class="benefit">
+        <strong>Upfront Estimate</strong>
+        <span>Know the expected price before booking.</span>
+      </div>
+
+      <div class="benefit">
+        <strong>Easy Scheduling</strong>
+        <span>Choose the day and time you prefer.</span>
+      </div>
+
     </section>
 
     <section class="form-card">
 
-      <form>
+      <form id="quoteForm">
 
-        <div class="form-group">
-          <label for="name">Name</label>
+        <div class="form-section">
 
-          <input
-            type="text"
-            id="name"
-            name="Name"
-            placeholder="Your name"
-            required
-          >
+          <div class="form-section-title">
+            <h3>1. Choose Your Detail</h3>
+            <p>Select the level of cleaning your vehicle needs.</p>
+          </div>
+
+          <div class="package-grid">
+
+            <label class="package-option">
+
+              <input
+                type="radio"
+                name="Package"
+                value="Interior Refresh"
+                data-price="100"
+              >
+
+              <div class="package-card">
+                <div class="package-name">
+                  Interior Refresh
+                </div>
+
+                <div class="package-price">
+                  $100+
+                </div>
+
+                <p>
+                  Best for maintained vehicles needing a professional cleanup.
+                </p>
+              </div>
+
+            </label>
+
+            <label class="package-option">
+
+              <input
+                type="radio"
+                name="Package"
+                value="Full Interior Detail"
+                data-price="150"
+                checked
+              >
+
+              <div class="package-card">
+
+                <div class="popular">
+                  Most Popular
+                </div>
+
+                <div class="package-name">
+                  Full Interior Detail
+                </div>
+
+                <div class="package-price">
+                  $150+
+                </div>
+
+                <p>
+                  Full interior reset for daily drivers or resale preparation.
+                </p>
+
+              </div>
+
+            </label>
+
+            <label class="package-option">
+
+              <input
+                type="radio"
+                name="Package"
+                value="Interior Restoration"
+                data-price="200"
+              >
+
+              <div class="package-card">
+                <div class="package-name">
+                  Interior Restoration
+                </div>
+
+                <div class="package-price">
+                  $200+
+                </div>
+
+                <p>
+                  Built for heavily used interiors that need deeper attention.
+                </p>
+              </div>
+
+            </label>
+
+          </div>
+
         </div>
 
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
+        <div class="form-section">
 
-          <input
-            type="tel"
-            id="phone"
-            name="Phone Number"
-            placeholder="208-000-0000"
-            required
-          >
+          <div class="form-section-title">
+            <h3>2. Tell Us About Your Vehicle</h3>
+          </div>
+
+          <div class="form-group">
+            <label for="vehicle">Vehicle</label>
+
+            <input
+              type="text"
+              id="vehicle"
+              placeholder="Example: 2018 Dodge Charger"
+              required
+            >
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="size">Vehicle Size</label>
+
+              <select id="size" required>
+                <option value="" data-price="0">
+                  Select vehicle size
+                </option>
+
+                <option value="Sedan / Coupe" data-price="0">
+                  Sedan / Coupe
+                </option>
+
+                <option value="Truck / 2-Row SUV" data-price="25">
+                  Truck / 2-Row SUV +$25
+                </option>
+
+                <option value="Large / 3-Row SUV" data-price="50">
+                  Large / 3-Row SUV +$50
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="conditionLevel">Condition</label>
+
+              <select id="conditionLevel" required>
+
+                <option value="" data-price="0">
+                  Select condition
+                </option>
+
+                <option value="Light" data-price="0">
+                  Light
+                </option>
+
+                <option value="Moderate" data-price="25">
+                  Moderate +$25
+                </option>
+
+                <option value="Heavy" data-price="75">
+                  Heavy +$75
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="form-group">
-          <label for="vehicle">Vehicle</label>
+        <div class="form-section">
 
-          <input
-            type="text"
-            id="vehicle"
-            name="Vehicle"
-            placeholder="Example: 2018 Dodge Charger"
-            required
-          >
+          <div class="form-section-title">
+            <h3>3. Optional Add-Ons</h3>
+
+            <p>
+              Select anything that applies to your vehicle.
+            </p>
+          </div>
+
+          <div class="addons">
+
+            <label class="addon">
+
+              <input
+                type="checkbox"
+                value="Pet Hair Removal"
+                data-price="35"
+              >
+
+              <div class="addon-text">
+                <strong>Pet Hair Removal</strong>
+                <span>+$35</span>
+              </div>
+
+            </label>
+
+            <label class="addon">
+
+              <input
+                type="checkbox"
+                value="Stain Treatment"
+                data-price="25"
+              >
+
+              <div class="addon-text">
+                <strong>Stain Treatment</strong>
+                <span>+$25</span>
+              </div>
+
+            </label>
+
+            <label class="addon">
+
+              <input
+                type="checkbox"
+                value="Odor Treatment"
+                data-price="25"
+              >
+
+              <div class="addon-text">
+                <strong>Odor Treatment</strong>
+                <span>+$25</span>
+              </div>
+
+            </label>
+
+            <label class="addon">
+
+              <input
+                type="checkbox"
+                value="Deep Carpet / Seat Extraction"
+                data-price="40"
+              >
+
+              <div class="addon-text">
+                <strong>Deep Extraction</strong>
+                <span>+$40</span>
+              </div>
+
+            </label>
+
+          </div>
+
         </div>
 
-        <div class="form-group">
-          <label for="service">Service</label>
+        <div class="estimate-box">
 
-          <select
-            id="service"
-            name="Service"
-            required
+          <div class="estimate-label">
+            Estimated Starting Price
+          </div>
+
+          <div
+            class="estimate-price"
+            id="estimatePrice"
           >
-            <option value="">
-              Select a service
-            </option>
+            $150
+          </div>
 
-            <option value="Resale Preparation">
-              Resale Preparation
-            </option>
+          <div class="estimate-note">
+            This is an estimate based on the information provided.
+            Final pricing is confirmed before service and may vary
+            for unusually severe conditions.
+          </div>
 
-            <option value="Interior Detail">
-              Interior Detail
-            </option>
-
-            <option value="Deep Interior Cleaning">
-              Deep Interior Cleaning
-            </option>
-
-            <option value="Other">
-              Other
-            </option>
-          </select>
         </div>
 
-        <div class="form-group">
-          <label for="date">Preferred Date</label>
+        <div class="resale-note">
 
-          <input
-            type="date"
-            id="date"
-            name="Preferred Date"
-            required
-          >
+          <strong>
+            Selling your vehicle?
+          </strong>
+
+          <p>
+            A professionally cleaned interior can help your listing
+            make a stronger first impression in photos and during buyer
+            viewings. Our Full Interior Detail is a great option for
+            resale preparation.
+          </p>
+
         </div>
 
-        <div class="form-group">
-          <label for="time">Preferred Time</label>
+        <div class="form-section">
 
-          <select
-            id="time"
-            name="Preferred Time"
-            required
-          >
-            <option value="">
-              Select a time
-            </option>
+          <div class="form-section-title">
+            <h3>4. Request Your Appointment</h3>
+          </div>
 
-            <option value="Morning">
-              Morning
-            </option>
+          <div class="form-row">
 
-            <option value="Afternoon">
-              Afternoon
-            </option>
+            <div class="form-group">
+              <label for="name">Name</label>
 
-            <option value="Evening">
-              Evening
-            </option>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+                required
+              >
+            </div>
 
-            <option value="Flexible">
-              Flexible
-            </option>
-          </select>
-        </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
 
-        <div class="form-group">
-          <label for="location">Service Location</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="208-000-0000"
+                required
+              >
+            </div>
 
-          <input
-            type="text"
-            id="location"
-            name="Service Location"
-            placeholder="City or address"
-            required
-          >
-        </div>
+          </div>
 
-        <div class="form-group">
-          <label for="condition">Vehicle Condition</label>
+          <div class="form-row">
 
-          <textarea
-            id="condition"
-            name="Vehicle Condition"
-            placeholder="Tell us anything we should know about the vehicle..."
-          ></textarea>
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+
+              <input
+                type="date"
+                id="date"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="time">Preferred Time</label>
+
+              <select id="time" required>
+
+                <option value="">
+                  Select a time
+                </option>
+
+                <option value="Morning">
+                  Morning
+                </option>
+
+                <option value="Afternoon">
+                  Afternoon
+                </option>
+
+                <option value="Evening">
+                  Evening
+                </option>
+
+                <option value="Flexible">
+                  Flexible
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label for="location">Service Location</label>
+
+            <input
+              type="text"
+              id="location"
+              placeholder="City or address"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+
+            <label for="notes">
+              Anything Else We Should Know?
+            </label>
+
+            <textarea
+              id="notes"
+              placeholder="Heavy stains, pet hair, spills, special concerns, resale preparation, etc."
+            ></textarea>
+
+          </div>
+
         </div>
 
         <button
           type="submit"
           class="submit-btn"
         >
-          Request Availability
+          Request This Quote & Availability
         </button>
 
       </form>
@@ -623,26 +1132,196 @@
     </section>
 
     <div class="contact-note">
+
       Prefer to call or text?
+
       <a href="tel:9862089586">
         986-208-9586
       </a>
+
     </div>
 
   </main>
 
   <script>
+
     const dateInput = document.getElementById("date");
 
-    if (dateInput) {
-      const today = new Date();
+    const today = new Date();
 
-      const year = today.getFullYear();
-      const month = String(today.getMonth() + 1).padStart(2, "0");
-      const day = String(today.getDate()).padStart(2, "0");
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
 
-      dateInput.min = `${year}-${month}-${day}`;
+    dateInput.min = `${year}-${month}-${day}`;
+
+
+    const packageInputs =
+      document.querySelectorAll('input[name="Package"]');
+
+    const sizeSelect =
+      document.getElementById("size");
+
+    const conditionSelect =
+      document.getElementById("conditionLevel");
+
+    const addonInputs =
+      document.querySelectorAll('.addon input[type="checkbox"]');
+
+    const estimatePrice =
+      document.getElementById("estimatePrice");
+
+
+    function calculatePrice() {
+
+      let total = 0;
+
+      const selectedPackage =
+        document.querySelector('input[name="Package"]:checked');
+
+      if (selectedPackage) {
+        total += Number(selectedPackage.dataset.price);
+      }
+
+
+      const selectedSize =
+        sizeSelect.options[sizeSelect.selectedIndex];
+
+      if (selectedSize) {
+        total += Number(selectedSize.dataset.price || 0);
+      }
+
+
+      const selectedCondition =
+        conditionSelect.options[conditionSelect.selectedIndex];
+
+      if (selectedCondition) {
+        total += Number(selectedCondition.dataset.price || 0);
+      }
+
+
+      addonInputs.forEach(addon => {
+
+        if (addon.checked) {
+          total += Number(addon.dataset.price);
+        }
+
+      });
+
+
+      estimatePrice.textContent = `$${total}`;
+
+      return total;
     }
+
+
+    packageInputs.forEach(input => {
+      input.addEventListener("change", calculatePrice);
+    });
+
+    sizeSelect.addEventListener("change", calculatePrice);
+    conditionSelect.addEventListener("change", calculatePrice);
+
+    addonInputs.forEach(input => {
+      input.addEventListener("change", calculatePrice);
+    });
+
+
+    document
+      .getElementById("quoteForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const total = calculatePrice();
+
+        const selectedPackage =
+          document.querySelector('input[name="Package"]:checked');
+
+        const packageName =
+          selectedPackage
+            ? selectedPackage.value
+            : "Not selected";
+
+        const vehicle =
+          document.getElementById("vehicle").value;
+
+        const size =
+          document.getElementById("size").value;
+
+        const condition =
+          document.getElementById("conditionLevel").value;
+
+        const name =
+          document.getElementById("name").value;
+
+        const phone =
+          document.getElementById("phone").value;
+
+        const date =
+          document.getElementById("date").value;
+
+        const time =
+          document.getElementById("time").value;
+
+        const location =
+          document.getElementById("location").value;
+
+        const notes =
+          document.getElementById("notes").value;
+
+
+        const selectedAddons = [];
+
+        addonInputs.forEach(addon => {
+
+          if (addon.checked) {
+            selectedAddons.push(addon.value);
+          }
+
+        });
+
+
+        const addonText =
+          selectedAddons.length
+            ? selectedAddons.join(", ")
+            : "None";
+
+
+        const message =
+`Twin Turbo Detailers Quote Request
+
+Name: ${name}
+Phone: ${phone}
+
+Vehicle: ${vehicle}
+Vehicle Size: ${size}
+Condition: ${condition}
+
+Package: ${packageName}
+Add-Ons: ${addonText}
+
+Estimated Starting Price: $${total}
+
+Preferred Date: ${date}
+Preferred Time: ${time}
+Location: ${location}
+
+Notes: ${notes || "None"}`;
+
+
+        const encodedMessage =
+          encodeURIComponent(message);
+
+
+        window.location.href =
+          `sms:9862089586?&body=${encodedMessage}`;
+
+      });
+
+
+    calculatePrice();
+
   </script>
 
 </body>
