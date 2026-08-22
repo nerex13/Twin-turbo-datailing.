@@ -32,36 +32,45 @@
       overflow-x: hidden;
     }
 
+    /* BACKGROUND IMAGE */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      z-index: -2;
+      z-index: -3;
+
       background:
         linear-gradient(
-          rgba(5, 8, 13, 0.90),
-          rgba(5, 8, 13, 0.95)
+          rgba(5, 8, 13, 0.91),
+          rgba(5, 8, 13, 0.96)
         ),
-        url("IMG_0982.png") center / cover no-repeat;
+        url("logo.png");
+
+      background-size: 420px;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.65;
     }
 
+    /* SUBTLE BLUE GLOW */
     body::after {
       content: "";
       position: fixed;
       inset: 0;
-      z-index: -1;
+      z-index: -2;
+      pointer-events: none;
+
       background:
         radial-gradient(
-          circle at top,
-          rgba(22, 140, 255, 0.18),
-          transparent 42%
+          circle at 20% 15%,
+          rgba(52, 152, 219, 0.10),
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at 80% 70%,
+          rgba(100, 180, 255, 0.08),
+          transparent 38%
         );
-      pointer-events: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
     }
 
     a {
@@ -69,333 +78,418 @@
       text-decoration: none;
     }
 
-    .container {
-      width: min(950px, calc(100% - 32px));
-      margin: 0 auto;
+    /* BACKGROUND QUOTES */
+    .quote-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
     }
 
+    .quote-bg span {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.025);
+      font-size: clamp(18px, 4vw, 34px);
+      font-weight: 800;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      transform: rotate(-11deg);
+    }
+
+    .quote-bg span:nth-child(1) {
+      top: 23%;
+      left: -4%;
+    }
+
+    .quote-bg span:nth-child(2) {
+      top: 55%;
+      right: -8%;
+    }
+
+    .quote-bg span:nth-child(3) {
+      top: 82%;
+      left: 1%;
+    }
+
+    /* HEADER */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(5, 8, 13, 0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(92, 180, 255, 0.18);
+      width: 100%;
+      background: rgba(5, 9, 15, 0.94);
+      border-bottom: 1px solid rgba(93, 169, 228, 0.28);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
-    .nav {
-      min-height: 82px;
+    .header-inner {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 132px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 18px;
     }
 
     .brand-logo {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 1px solid rgba(215, 221, 229, 0.35);
-      box-shadow: 0 0 20px rgba(22, 140, 255, 0.22);
+      width: 96px;
+      height: 96px;
+      object-fit: contain;
+      border-radius: 20px;
+      box-shadow:
+        0 0 0 1px rgba(80, 169, 235, 0.32),
+        0 8px 30px rgba(0, 0, 0, 0.35);
     }
 
-    .brand-text strong {
-      display: block;
-      font-size: 17px;
+    .brand-text h1 {
+      font-size: 28px;
+      line-height: 1.1;
+      margin-bottom: 7px;
+      letter-spacing: -0.4px;
     }
 
-    .brand-text span {
-      display: block;
-      color: #9ba8b8;
-      font-size: 11px;
-      letter-spacing: 1.5px;
+    .brand-text p {
+      color: #a8b1bd;
+      font-size: 15px;
+      letter-spacing: 3px;
       text-transform: uppercase;
     }
 
     .back-link {
-      color: #79c2ff;
-      font-size: 14px;
-      font-weight: 800;
+      color: #69b9f4;
+      font-size: 18px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: 0.2s ease;
     }
 
-    .hero {
-      padding: 80px 0 48px;
+    .back-link:hover {
+      color: #ffffff;
+    }
+
+    /* MAIN */
+    main {
+      width: min(760px, calc(100% - 30px));
+      margin: 34px auto 70px;
+    }
+
+    .intro {
       text-align: center;
+      margin-bottom: 28px;
     }
 
-    .hero-logo {
-      width: 210px;
-      margin: 0 auto 28px;
-      border-radius: 18px;
-      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.38);
+    .intro h2 {
+      font-size: clamp(30px, 6vw, 45px);
+      margin-bottom: 8px;
+      letter-spacing: -1px;
     }
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 15px;
-      padding: 7px 13px;
-      border: 1px solid rgba(92, 180, 255, 0.5);
-      border-radius: 999px;
-      color: #73bdff;
-      background: rgba(20, 105, 185, 0.12);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: clamp(40px, 7vw, 66px);
-      line-height: 1;
-      margin-bottom: 18px;
-      letter-spacing: -2px;
-    }
-
-    h1 span {
-      color: #55adff;
-    }
-
-    .hero p {
-      max-width: 650px;
+    .intro p {
+      color: #b7c0cb;
+      max-width: 620px;
       margin: 0 auto;
-      color: #bec8d3;
       font-size: 17px;
     }
 
-    .quotes {
-      padding: 10px 0 45px;
-    }
-
-    .quote-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .quote {
-      padding: 20px;
-      text-align: center;
-      border-radius: 14px;
-      background: rgba(10, 16, 24, 0.80);
-      border: 1px solid rgba(120, 190, 255, 0.14);
-      color: #dbe4ed;
-      font-weight: 700;
-      backdrop-filter: blur(8px);
-    }
-
-    .form-section {
-      padding: 0 0 90px;
-    }
-
+    /* FORM CARD */
     .form-card {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 38px;
-      border-radius: 22px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(19, 29, 42, 0.94),
-          rgba(8, 13, 20, 0.96)
-        );
-      border: 1px solid rgba(92, 180, 255, 0.25);
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
-      backdrop-filter: blur(12px);
+      background: rgba(10, 20, 31, 0.91);
+      border: 1px solid rgba(63, 157, 221, 0.32);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+      backdrop-filter: blur(11px);
+      -webkit-backdrop-filter: blur(11px);
     }
 
-    .form-card h2 {
-      text-align: center;
-      font-size: 34px;
-      margin-bottom: 8px;
+    .form-group {
+      margin-bottom: 27px;
+      width: 100%;
     }
 
-    .form-intro {
-      text-align: center;
-      color: #aeb9c5;
-      margin-bottom: 30px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    .field.full {
-      grid-column: 1 / -1;
+    .form-group:last-of-type {
+      margin-bottom: 0;
     }
 
     label {
-      font-size: 13px;
-      font-weight: 800;
-      color: #d9e1e9;
+      display: block;
+      color: #e0e6ed;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 11px;
     }
 
     input,
     select,
     textarea {
       width: 100%;
-      border: 1px solid rgba(150, 175, 205, 0.24);
-      border-radius: 10px;
-      padding: 14px 15px;
-      font: inherit;
+      max-width: 100%;
+      display: block;
+
+      background: #0a131e;
       color: #ffffff;
-      background: #0b121b;
+
+      border: 1px solid #344252;
+      border-radius: 16px;
+
+      padding: 17px 18px;
+
+      font-family: inherit;
+      font-size: 18px;
+      line-height: 1.4;
+
       outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    input {
+      min-height: 62px;
+    }
+
+    select {
+      min-height: 62px;
+      appearance: auto;
+      -webkit-appearance: menulist;
+    }
+
+    textarea {
+      min-height: 135px;
+      resize: vertical;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
-      border-color: #55adff;
-      box-shadow: 0 0 0 3px rgba(85, 173, 255, 0.10);
+      border-color: #66baf4;
+      box-shadow: 0 0 0 3px rgba(70, 161, 224, 0.12);
+      background: #0c1723;
     }
 
-    textarea {
-      min-height: 120px;
-      resize: vertical;
+    input::placeholder,
+    textarea::placeholder {
+      color: #707b88;
     }
 
-    select option {
-      background: #0b121b;
-      color: white;
+    /* AUTOFILL */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      -webkit-text-fill-color: #111111;
+      -webkit-box-shadow: 0 0 0 1000px #fbffb8 inset;
+      box-shadow: 0 0 0 1000px #fbffb8 inset;
+      border-color: #cfd298;
+      transition: background-color 9999s ease-out 0s;
     }
 
-    .notice {
-      margin-top: 22px;
-      padding: 14px 16px;
-      border-radius: 10px;
-      background: rgba(22, 140, 255, 0.09);
-      border: 1px solid rgba(92, 180, 255, 0.18);
-      color: #b9c8d7;
-      font-size: 13px;
-      text-align: center;
+    /* IPHONE DATE FIX */
+    input[type="date"] {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      height: 62px;
+
+      padding: 17px 18px;
+
+      background: #0a131e;
+      color: #ffffff;
+
+      border: 1px solid #344252;
+      border-radius: 16px;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: normal;
+
+      text-align: left;
+
+      display: block;
+      box-sizing: border-box;
+
+      -webkit-appearance: none;
+      appearance: none;
     }
 
-    .button-row {
-      margin-top: 24px;
-      display: flex;
-      gap: 12px;
+    input[type="date"]::-webkit-date-and-time-value {
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      min-height: 0;
     }
 
-    .btn {
-      min-height: 52px;
-      border-radius: 9px;
-      padding: 0 22px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 900;
-      font-size: 15px;
-      border: none;
+    input[type="date"]::-webkit-datetime-edit {
+      display: block;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+
+    input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+      padding: 0;
+      margin: 0;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      margin-left: auto;
+      opacity: 0.8;
       cursor: pointer;
-      flex: 1;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #168cff, #60b7ff);
-      color: white;
-      box-shadow: 0 10px 30px rgba(22, 140, 255, 0.25);
+    /* BUTTON */
+    .submit-btn {
+      width: 100%;
+      border: none;
+      border-radius: 16px;
+      padding: 18px 22px;
+      margin-top: 10px;
+
+      background: linear-gradient(
+        135deg,
+        #328fd1,
+        #65bdf7
+      );
+
+      color: #04101a;
+
+      font-size: 19px;
+      font-weight: 800;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 10px 28px rgba(55, 153, 220, 0.25);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
-    .btn-secondary {
-      border: 1px solid rgba(150, 175, 205, 0.3);
-      background: rgba(255, 255, 255, 0.04);
-      color: #dce3ea;
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 14px 34px rgba(55, 153, 220, 0.34);
     }
 
-    .contact {
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    /* CONTACT */
+    .contact-note {
       text-align: center;
-      padding-bottom: 75px;
+      color: #9eabb8;
+      margin-top: 25px;
+      font-size: 15px;
     }
 
-    .contact h2 {
-      font-size: clamp(32px, 5vw, 48px);
-      margin-bottom: 12px;
+    .contact-note a {
+      color: #68baf4;
+      font-weight: 700;
     }
 
-    .contact p {
-      color: #adb8c4;
-      margin-bottom: 18px;
-    }
-
-    .phone {
-      display: inline-block;
-      color: #5db6ff;
-      font-size: clamp(28px, 5vw, 42px);
-      font-weight: 900;
-    }
-
-    footer {
-      padding: 28px 0;
-      text-align: center;
-      color: #748190;
-      font-size: 13px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      background: rgba(5, 8, 13, 0.75);
-    }
-
+    /* MOBILE */
     @media (max-width: 700px) {
-      .nav {
-        min-height: 74px;
+      .header-inner {
+        width: calc(100% - 28px);
+        min-height: 132px;
+        gap: 12px;
+      }
+
+      .brand {
+        gap: 13px;
       }
 
       .brand-logo {
-        width: 52px;
-        height: 52px;
+        width: 82px;
+        height: 82px;
+        border-radius: 18px;
       }
 
-      .brand-text strong {
-        font-size: 14px;
+      .brand-text h1 {
+        font-size: 21px;
       }
 
-      .brand-text span {
-        font-size: 9px;
+      .brand-text p {
+        font-size: 11px;
+        letter-spacing: 2.4px;
       }
 
       .back-link {
-        font-size: 12px;
+        font-size: 16px;
       }
 
-      .hero {
-        padding-top: 55px;
+      main {
+        width: calc(100% - 28px);
+        margin-top: 26px;
       }
 
-      .hero-logo {
-        width: 175px;
-      }
-
-      .quote-grid {
-        grid-template-columns: 1fr;
+      .intro {
+        margin-bottom: 23px;
       }
 
       .form-card {
-        padding: 28px 20px;
+        padding: 27px 22px;
+        border-radius: 20px;
       }
 
-      .form-grid {
-        grid-template-columns: 1fr;
+      label {
+        font-size: 16px;
       }
 
-      .field.full {
-        grid-column: auto;
+      input,
+      select,
+      textarea,
+      input[type="date"] {
+        font-size: 17px;
       }
 
-      .button-row {
-        flex-direction: column;
+      .quote-bg span {
+        font-size: 21px;
+        opacity: 0.7;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .header-inner {
+        min-height: 116px;
+      }
+
+      .brand-logo {
+        width: 70px;
+        height: 70px;
+      }
+
+      .brand-text h1 {
+        font-size: 18px;
+      }
+
+      .brand-text p {
+        font-size: 10px;
+        letter-spacing: 2px;
+      }
+
+      .back-link {
+        font-size: 14px;
+      }
+
+      .form-card {
+        padding: 22px 18px;
+      }
+
+      .form-group {
+        margin-bottom: 23px;
       }
     }
   </style>
@@ -403,284 +497,270 @@
 
 <body>
 
-<header>
-  <div class="container nav">
-
-    <a href="./index.html" class="brand">
-
-      <img
-        src="IMG_0982.png"
-        alt="Twin Turbo Detailers logo"
-        class="brand-logo"
-      >
-
-      <div class="brand-text">
-        <strong>Twin Turbo Detailers</strong>
-        <span>Mobile Auto Detailing</span>
-      </div>
-
-    </a>
-
-    <a href="./index.html" class="back-link">
-      ← Back to Home
-    </a>
-
+  <!-- SUBTLE BACKGROUND QUOTES -->
+  <div class="quote-bg">
+    <span>Precision Shine. Every Time.</span>
+    <span>Where Clean Meets Perfection.</span>
+    <span>Bringing Your Vehicle Back to Life.</span>
   </div>
-</header>
 
-<main>
 
-  <section class="hero">
-    <div class="container">
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
 
-      <img
-        src="IMG_0982.png"
-        alt="Twin Turbo Detailers"
-        class="hero-logo"
-      >
+      <a href="index.html" class="brand">
+        <img
+          src="logo.png"
+          alt="Twin Turbo Detailers Logo"
+          class="brand-logo"
+        >
 
-      <div class="eyebrow">
-        Professional Auto Detailing
-      </div>
-
-      <h1>
-        Check <span>Availability</span>
-      </h1>
-
-      <p>
-        Tell us a little about your vehicle and when you'd like your detail.
-        We'll confirm availability with you directly.
-      </p>
-
-    </div>
-  </section>
-
-  <section class="quotes">
-    <div class="container">
-
-      <div class="quote-grid">
-
-        <div class="quote">
-          “Precision Shine. Every Time.”
+        <div class="brand-text">
+          <h1>Twin Turbo Detailers</h1>
+          <p>Mobile Auto Detailing</p>
         </div>
+      </a>
 
-        <div class="quote">
-          “Where Clean Meets Perfection.”
-        </div>
-
-        <div class="quote">
-          “Bringing Your Vehicle Back to Life.”
-        </div>
-
-        <div class="quote">
-          “Professional Auto Detailing.”
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="form-section">
-    <div class="container">
-
-      <div class="form-card">
-
-        <h2>Request an Appointment</h2>
-
-        <p class="form-intro">
-          Complete the form below and we'll get back to you to confirm your slot.
-        </p>
-
-        <form id="availabilityForm">
-
-          <div class="form-grid">
-
-            <div class="field">
-              <label for="name">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Full name"
-                required
-              >
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                placeholder="(000) 000-0000"
-                required
-              >
-            </div>
-
-            <div class="field">
-              <label for="vehicle">Vehicle</label>
-              <input
-                type="text"
-                id="vehicle"
-                placeholder="Example: 2018 Ford F-150"
-                required
-              >
-            </div>
-
-            <div class="field">
-              <label for="service">Service</label>
-
-              <select id="service" required>
-                <option value="">Select a service</option>
-                <option>Complete Interior Reset - $150</option>
-                <option>Resale Preparation</option>
-                <option>Other / Ask Us</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="date">Preferred Date</label>
-
-              <input
-                type="date"
-                id="date"
-                required
-              >
-            </div>
-
-            <div class="field">
-              <label for="time">Preferred Time</label>
-
-              <select id="time" required>
-                <option value="">Select a time</option>
-                <option>Morning</option>
-                <option>Afternoon</option>
-                <option>Evening</option>
-                <option>Flexible</option>
-              </select>
-            </div>
-
-            <div class="field full">
-              <label for="location">Service Location</label>
-
-              <input
-                type="text"
-                id="location"
-                placeholder="City or address where the vehicle will be"
-                required
-              >
-            </div>
-
-            <div class="field full">
-              <label for="details">
-                Vehicle Condition / Additional Details
-              </label>
-
-              <textarea
-                id="details"
-                placeholder="Tell us anything we should know about the vehicle, stains, pet hair, heavy dirt, etc."
-              ></textarea>
-            </div>
-
-          </div>
-
-          <div class="notice">
-            Submitting this request does not guarantee the appointment time.
-            Twin Turbo Detailers will contact you to confirm availability.
-          </div>
-
-          <div class="button-row">
-
-            <a
-              href="sms:9862089586"
-              class="btn btn-secondary"
-            >
-              Text Us Instead
-            </a>
-
-            <button
-              type="submit"
-              class="btn btn-primary"
-            >
-              Request Availability
-            </button>
-
-          </div>
-
-        </form>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="contact">
-    <div class="container">
-
-      <div class="eyebrow">
-        Twin Turbo Detailers
-      </div>
-
-      <h2>
-        Bringing Your Vehicle Back to Life.
-      </h2>
-
-      <p>
-        Prefer to talk directly? Call or text us.
-      </p>
-
-      <a
-        href="tel:9862089586"
-        class="phone"
-      >
-        986-208-9586
+      <a href="index.html" class="back-link">
+        ← Back to Home
       </a>
 
     </div>
-  </section>
+  </header>
 
-</main>
 
-<footer>
-  <div class="container">
-    © 2026 Twin Turbo Detailers. Precision Shine. Every Time.
-  </div>
-</footer>
+  <!-- MAIN -->
+  <main>
 
-<script>
-  const availabilityForm = document.getElementById("availabilityForm");
+    <section class="intro">
+      <h2>Check Availability</h2>
 
-  availabilityForm.addEventListener("submit", function(event) {
-    event.preventDefault();
+      <p>
+        Tell us about your vehicle and what time works best.
+        We’ll contact you to confirm your appointment.
+      </p>
+    </section>
 
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const vehicle = document.getElementById("vehicle").value.trim();
-    const service = document.getElementById("service").value;
-    const date = document.getElementById("date").value;
-    const time = document.getElementById("time").value;
-    const location = document.getElementById("location").value.trim();
-    const details = document.getElementById("details").value.trim();
 
-    const message =
-`Twin Turbo Detailers Availability Request
+    <section class="form-card">
 
-Name: ${name}
-Phone: ${phone}
-Vehicle: ${vehicle}
-Service: ${service}
-Preferred Date: ${date}
-Preferred Time: ${time}
-Location: ${location}
+      <form
+        action="https://formsubmit.co/YOUR-EMAIL-HERE"
+        method="POST"
+      >
 
-Vehicle Condition / Details:
-${details || "None provided"}`;
+        <!-- FORMSUBMIT SETTINGS -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Twin Turbo Detailers Booking Request"
+        >
 
-    const smsLink =
-      "sms:9862089586?body=" + encodeURIComponent(message);
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false"
+        >
 
-    window.location.href = smsLink;
-  });
-</script>
+
+        <!-- NAME -->
+        <div class="form-group">
+          <label for="name">
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="Name"
+            placeholder="Your name"
+            required
+          >
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="form-group">
+          <label for="phone">
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="Phone Number"
+            placeholder="208-000-0000"
+            required
+          >
+        </div>
+
+
+        <!-- VEHICLE -->
+        <div class="form-group">
+          <label for="vehicle">
+            Vehicle
+          </label>
+
+          <input
+            type="text"
+            id="vehicle"
+            name="Vehicle"
+            placeholder="Example: 2018 Dodge Charger"
+            required
+          >
+        </div>
+
+
+        <!-- SERVICE -->
+        <div class="form-group">
+          <label for="service">
+            Service
+          </label>
+
+          <select
+            id="service"
+            name="Service"
+            required
+          >
+            <option value="">
+              Select a service
+            </option>
+
+            <option value="Resale Preparation">
+              Resale Preparation
+            </option>
+
+            <option value="Interior Detail">
+              Interior Detail
+            </option>
+
+            <option value="Deep Interior Cleaning">
+              Deep Interior Cleaning
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+          </select>
+        </div>
+
+
+        <!-- DATE -->
+        <div class="form-group">
+          <label for="date">
+            Preferred Date
+          </label>
+
+          <input
+            type="date"
+            id="date"
+            name="Preferred Date"
+            required
+          >
+        </div>
+
+
+        <!-- TIME -->
+        <div class="form-group">
+          <label for="time">
+            Preferred Time
+          </label>
+
+          <select
+            id="time"
+            name="Preferred Time"
+            required
+          >
+            <option value="">
+              Select a time
+            </option>
+
+            <option value="Morning">
+              Morning
+            </option>
+
+            <option value="Afternoon">
+              Afternoon
+            </option>
+
+            <option value="Evening">
+              Evening
+            </option>
+
+            <option value="Flexible">
+              Flexible
+            </option>
+          </select>
+        </div>
+
+
+        <!-- LOCATION -->
+        <div class="form-group">
+          <label for="location">
+            Service Location
+          </label>
+
+          <input
+            type="text"
+            id="location"
+            name="Service Location"
+            placeholder="City or address"
+            required
+          >
+        </div>
+
+
+        <!-- CONDITION -->
+        <div class="form-group">
+          <label for="condition">
+            Vehicle Condition
+          </label>
+
+          <textarea
+            id="condition"
+            name="Vehicle Condition"
+            placeholder="Tell us anything we should know about the vehicle..."
+          ></textarea>
+        </div>
+
+
+        <!-- BUTTON -->
+        <button
+          type="submit"
+          class="submit-btn"
+        >
+          Request Availability
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <div class="contact-note">
+      Prefer to call or text?
+      <a href="tel:9862089586">
+        986-208-9586
+      </a>
+    </div>
+
+  </main>
+
+
+  <script>
+    const dateInput = document.getElementById("date");
+
+    if (dateInput) {
+      const today = new Date();
+
+      const year = today.getFullYear();
+      const month = String(today.getMonth() + 1).padStart(2, "0");
+      const day = String(today.getDate()).padStart(2, "0");
+
+      dateInput.min = `${year}-${month}-${day}`;
+    }
+  </script>
 
 </body>
 </html>
