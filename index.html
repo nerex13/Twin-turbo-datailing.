@@ -55,6 +55,7 @@
         1px solid rgba(120, 190, 255, 0.2);
 
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
     .nav {
@@ -523,6 +524,7 @@
       text-transform: uppercase;
 
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .before-label {
@@ -623,8 +625,89 @@
       margin: 0 auto 28px;
     }
 
-    .contact {
+    /* FAQ */
+
+    .faq {
       background: #05080d;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 12px;
+
+      border:
+        1px solid rgba(120, 190, 255, 0.16);
+
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(24, 34, 47, 0.88),
+          rgba(10, 16, 24, 0.96)
+        );
+
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      list-style: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 16px;
+
+      padding: 20px 22px;
+
+      cursor: pointer;
+
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+
+      color: #55adff;
+
+      font-size: 27px;
+      font-weight: 400;
+
+      line-height: 1;
+
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 22px 21px;
+
+      color: #aeb8c3;
+
+      font-size: 15px;
+    }
+
+    .faq-cta {
+      text-align: center;
+
+      margin-top: 30px;
+    }
+
+    .contact {
+      background: #080d14;
 
       text-align: center;
     }
@@ -666,6 +749,12 @@
         1px solid rgba(255,255,255,0.07);
 
       font-size: 13px;
+    }
+
+    /* MOBILE STICKY BAR */
+
+    .mobile-action-bar {
+      display: none;
     }
 
     @media (max-width: 850px) {
@@ -719,6 +808,72 @@
         height: 330px;
       }
 
+      .mobile-action-bar {
+        position: fixed;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: 2000;
+
+        display: grid;
+
+        grid-template-columns: 1.4fr 1fr;
+
+        gap: 9px;
+
+        padding:
+          10px 12px
+          calc(10px + env(safe-area-inset-bottom));
+
+        background:
+          rgba(5, 8, 13, 0.96);
+
+        border-top:
+          1px solid rgba(85, 173, 255, 0.26);
+
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .mobile-action-bar a {
+        min-height: 48px;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 10px;
+
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .sticky-quote {
+        background:
+          linear-gradient(
+            135deg,
+            #168cff,
+            #60b7ff
+          );
+
+        color: white;
+      }
+
+      .sticky-call {
+        background: #101923;
+
+        border: 1px solid #4a5969;
+
+        color: #ffffff;
+      }
+
+      footer {
+        padding-bottom: 95px;
+      }
+
     }
 
     @media (max-width: 580px) {
@@ -770,6 +925,17 @@
         padding: 27px 22px;
       }
 
+      .faq-item summary {
+        padding: 18px;
+
+        font-size: 16px;
+      }
+
+      .faq-answer {
+        padding:
+          0 18px 18px;
+      }
+
     }
   </style>
 </head>
@@ -818,6 +984,10 @@
 
       <a href="#gallery">
         Gallery
+      </a>
+
+      <a href="#faq">
+        FAQ
       </a>
 
       <a href="#contact">
@@ -1167,7 +1337,8 @@
 
       <div class="price-note">
         Prices shown are starting prices. Final pricing depends on vehicle
-        size, condition, and selected services.
+        size, condition, and selected services. Excessive pet hair, staining,
+        trash, mud, or severe buildup may increase final pricing.
       </div>
 
     </div>
@@ -1312,6 +1483,17 @@
 
       </div>
 
+      <div style="text-align:center; margin-top:-15px;">
+
+        <a
+          href="./availability.html"
+          class="btn btn-primary"
+        >
+          Get My Quote
+        </a>
+
+      </div>
+
     </div>
 
   </section>
@@ -1435,6 +1617,140 @@
   </section>
 
 
+  <!-- FAQ -->
+
+  <section
+    class="faq"
+    id="faq"
+  >
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>
+          Common Questions
+        </span>
+
+        <h2>
+          Before Your Detail
+        </h2>
+
+        <p>
+          A few quick answers so you know exactly what to expect.
+        </p>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+
+          <summary>
+            How long does an interior detail take?
+          </summary>
+
+          <div class="faq-answer">
+            The exact time depends on vehicle size and condition.
+            Heavier buildup, stains, pet hair, or larger vehicles can
+            require additional time.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Do I need to bring my vehicle anywhere?
+          </summary>
+
+          <div class="faq-answer">
+            No. Twin Turbo Detailers is mobile, so we come directly to
+            your location.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What do you need access to?
+          </summary>
+
+          <div class="faq-answer">
+            We currently ask for access to a standard outdoor electrical
+            outlet at the service location.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Is the online quote the final price?
+          </summary>
+
+          <div class="faq-answer">
+            The online calculator provides an estimated starting price
+            based on the information you provide. Final pricing is confirmed
+            before service and may change for unusually severe conditions.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can you detail a vehicle I'm getting ready to sell?
+          </summary>
+
+          <div class="faq-answer">
+            Absolutely. Resale preparation is one of our core services.
+            We focus on getting the interior clean, presentable, and ready
+            for listing photos and buyer viewings.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            How do I request an appointment?
+          </summary>
+
+          <div class="faq-answer">
+            Use our Availability & Quote page to choose your service,
+            build an estimate, and send us your preferred date and time.
+            You can also call or text us directly.
+          </div>
+
+        </details>
+
+      </div>
+
+
+      <div class="faq-cta">
+
+        <a
+          href="./availability.html"
+          class="btn btn-primary"
+        >
+          Check My Price & Availability
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
   <section
     class="contact"
     id="contact"
@@ -1488,6 +1804,27 @@
   </div>
 
 </footer>
+
+
+<!-- MOBILE-ONLY ACTION BAR -->
+
+<div class="mobile-action-bar">
+
+  <a
+    href="./availability.html"
+    class="sticky-quote"
+  >
+    Get Quote
+  </a>
+
+  <a
+    href="tel:9862089586"
+    class="sticky-call"
+  >
+    Call
+  </a>
+
+</div>
 
 </body>
 </html>
